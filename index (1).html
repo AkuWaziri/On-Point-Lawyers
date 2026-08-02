@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>On Point Lawyers Consultant, sharia and common law</title>
+<title>On Point Lawyers Legal Consultant, sharia and common law</title>
 <meta name="description" content="Get clear legal guidance across sharia and common law: marriage, inheritance, business, property, and litigation. Book a consultation directly on WhatsApp.">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="manifest" href="manifest.json">
@@ -90,15 +90,32 @@
 
   .wrap{ max-width: 480px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
 
+  @media (min-width: 700px){
+    .wrap{ max-width: 640px; padding: 0 28px; }
+  }
+  @media (min-width: 1000px){
+    .wrap{ max-width: 880px; padding: 0 32px; }
+    .hero h1{ font-size: 40px; }
+    .grid-2{ grid-template-columns: repeat(4, 1fr); }
+    .guide-list{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+    .guide-list .guide-item{ margin-bottom: 0; }
+    .template-list{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .template-list .guide-item{ margin-bottom: 0; }
+    .card{ padding: 32px; }
+  }
+  @media (min-width: 1300px){
+    .wrap{ max-width: 1040px; }
+  }
+
   /* nav */
   .topbar{
     display:flex; align-items:center; justify-content:space-between;
     padding: 18px 20px;
     position: relative; z-index: 2;
   }
-  .brand{ display:flex; align-items:center; gap:10px; }
+  .brand{ display:flex; align-items:center; gap:6px; }
   .brand-mark{
-    width: 34px; height: 34px; border-radius: 50%;
+    width: 44px; height: 44px; border-radius: 50%;
     overflow: hidden;
     flex-shrink: 0;
   }
@@ -154,11 +171,22 @@
   .dual-divider .a{ background: linear-gradient(90deg, transparent, var(--gold)); }
   .dual-divider .b{ background: linear-gradient(90deg, var(--silver), transparent); }
   .dual-caption{
-    display:flex; justify-content:space-between; font-size: 11px;
-    color: var(--text-muted); margin-top: -14px; margin-bottom: 22px;
+    display:flex; justify-content:space-between; margin-top: 2px; margin-bottom: 22px;
   }
-  .dual-caption .l{ color: var(--gold); }
-  .dual-caption .r{ color: var(--silver); }
+  .dual-caption span{
+    font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
+    padding: 6px 13px; border-radius: 100px;
+  }
+  .dual-caption .l{
+    color: #1A1400;
+    background: var(--gold);
+    box-shadow: 0 4px 18px var(--gold-glow);
+  }
+  .dual-caption .r{
+    color: #12151C;
+    background: var(--silver);
+    box-shadow: 0 4px 18px var(--silver-glow);
+  }
 
   /* profile card */
   .card{
@@ -379,6 +407,73 @@
     text-align: left;
   }
 
+  /* AI chat modal */
+  .chat-overlay{
+    display:none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .chat-overlay.open{ display:flex; }
+  .chat-panel{
+    width: 100%; max-width: 480px;
+    height: 82vh; max-height: 720px;
+    background: var(--surface);
+    border: 1px solid var(--hairline-strong);
+    border-radius: 28px 28px 0 0;
+    display:flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .chat-header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .chat-title{ font-family:'Fraunces', serif; font-size:15px; font-weight:500; margin:0; }
+  .chat-subtitle{ font-size:11px; color: var(--text-muted); margin: 3px 0 0; }
+  .chat-close{
+    background: var(--surface-raised); border: 1px solid var(--hairline-strong);
+    color: var(--text-secondary); width:30px; height:30px; border-radius:50%;
+    font-size: 13px;
+  }
+  .chat-messages{
+    flex:1; overflow-y:auto; padding: 18px 20px;
+    display:flex; flex-direction: column; gap: 12px;
+  }
+  .chat-bubble{
+    font-size: 13px; line-height: 1.6; padding: 12px 15px;
+    border-radius: 16px; max-width: 85%;
+  }
+  .chat-bubble.bot{
+    background: var(--surface-raised); color: var(--text-primary);
+    border: 1px solid var(--hairline); align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .chat-bubble.user{
+    background: var(--gold); color: #1A1400; font-weight: 600;
+    align-self: flex-end; border-bottom-right-radius: 4px;
+  }
+  .chat-bubble.loading{
+    background: var(--surface-raised); border: 1px solid var(--hairline);
+    align-self: flex-start; color: var(--text-muted); font-style: italic;
+  }
+  .chat-input-row{
+    display:flex; gap:8px; padding: 14px 16px;
+    border-top: 1px solid var(--hairline);
+  }
+  .chat-input-row input{
+    flex:1; margin:0; background: var(--surface-raised);
+    border: 1px solid var(--hairline-strong); color: var(--text-primary);
+    padding: 12px 14px; border-radius: 100px; font-size: 13px; outline:none;
+  }
+  .chat-send{
+    width: 42px; height: 42px; border-radius: 50%; border:none;
+    background: var(--gold); color: #1A1400; font-size: 16px; font-weight: 700;
+    box-shadow: 0 4px 18px var(--gold-glow); flex-shrink:0;
+  }
+
   @media (prefers-reduced-motion: reduce){
     html{ scroll-behavior: auto; }
     .action{ transition: none; }
@@ -403,9 +498,9 @@
 <main class="wrap">
 
   <section class="hero">
-    <p class="eyebrow" onclick="openWhatsAppDirect()">Consultant</p>
-    <h1><em>Both</em> Side of the Laws.</h1>
-    <p>Sharia and Common law, explained plainly: Marriage, inheritance, business, tenancy, draft, contract and litigation.</p>
+    <p class="eyebrow" onclick="openWhatsAppDirect()">Legal Consultant</p>
+    <h1>Expert guidance in both Sharia and Common Law.</h1>
+    <p>Providing practical solutions in family matters, inheritance, business, tenancy, contract drafting, and dispute resolution &amp; so much more.</p>
 
     <div class="dual-divider"><span class="a"></span><span class="b"></span></div>
     <div class="dual-caption"><span class="l">Sharia Law</span><span class="r">Common law</span></div>
@@ -469,303 +564,301 @@
 
   <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Sharia vs common law inheritance</div><div class="s">What's the difference, and which applies to you</div></div>
+      <div><div class="t">A widow's rights after her husband's death</div><div class="s">Protecting yourself from being pushed out</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>In Nigeria, which inheritance rules apply to you often depends on how you married and where you live, not just your faith. If you married under the Marriage Act (a court or registry wedding), your estate is generally distributed under the Administration of Estates Law, with fixed shares for spouse and children. If you married under Islamic law (nikah) and did not also register under the Marriage Act, sharia inheritance rules typically apply, especially in states with sharia courts, and shares follow the fixed portions set out in the Quran for spouses, children, and other relatives.</p>
-      <p>Where things get complicated: a person can have a valid nikah and still be treated as married under common law in some circumstances, and the presence of a will changes what a court will recognise, sometimes even overriding intestate rules depending on the estate and the beneficiaries. This is exactly the kind of situation where the "right" answer depends on your specific documents and location, not a general rule.</p>
-      <p class="guide-cta">This is general information. Book a consultation for guidance on your specific case.</p>
+      <p>Widows in Nigeria are sometimes pressured by in-laws to leave the matrimonial home or sign away property soon after a husband's death, this is not lawful, and a widow retains rights to her share of the estate under whichever system applied to the marriage, sharia or common law, regardless of family pressure.</p>
+      <p>Acting quickly to secure documents, property records, and evidence of the marriage protects your position significantly, delays make it easier for others to move assets or dispute your claim.</p>
+      <p class="guide-cta">Facing pressure after a bereavement? Book a consultation to protect your position.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Marriage &amp; divorce, two systems</div><div class="s">Nikah, court registration, and dissolution</div></div>
+      <div><div class="t">Paternity and legitimacy disputes</div><div class="s">When fatherhood is contested</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>A nikah (Islamic marriage contract) is recognised under sharia law but is not automatically registered with the Nigerian government. If you want your marriage recognised under common law too, for things like inheritance, immigration, or joint property, it needs to be separately registered under the Marriage Act, usually at a registry or through a licensed venue.</p>
-      <p>Dissolution works differently across the two systems. Under sharia, divorce can happen through talaq (pronounced by the husband), khul (initiated by the wife, often with return of dowry), or through a sharia court ruling. Under common law, dissolving a registered marriage requires a court process through the High Court, typically citing grounds such as unreasonable behaviour or a period of separation. If your marriage exists under both systems, both processes may need to be addressed to fully close the matter.</p>
-      <p class="guide-cta">This is general information. Book a consultation for guidance on your specific case.</p>
+      <p>Paternity disputes commonly arise around child maintenance, inheritance, or custody, and Nigerian courts can order DNA testing to resolve the question where it's genuinely contested. Under sharia, legitimacy is generally tied to a valid marriage at the time of birth, which affects inheritance rights differently than under common law.</p>
+      <p>A child's rights to maintenance are not always dependent on the parents' marital status, this is worth understanding clearly rather than assuming disputed paternity ends financial responsibility.</p>
+      <p class="guide-cta">Involved in a paternity or legitimacy dispute? Book a consultation.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Child custody after divorce</div><div class="s">What courts weigh, in both systems</div></div>
+      <div><div class="t">Marriage registration for returning Nigerians</div><div class="s">Diaspora marriages and local recognition</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Under common law, custody decisions are guided primarily by the "best interest of the child", covering the child's age, welfare, education, and stability, rather than automatically favouring either parent. Courts can also order joint custody, with one parent having primary physical custody and the other having visitation rights.</p>
-      <p>Under sharia law, custody (hadanah) commonly follows age-based guidelines, with young children often placed with the mother and older children's placement considered more flexibly, though this varies by school of thought and specific circumstances. In both systems, an existing agreement between parents can guide the outcome, but a court retains the final say if there's a dispute.</p>
-      <p class="guide-cta">Going through custody proceedings? Book a consultation to understand your options.</p>
+      <p>A marriage conducted abroad is generally recognised in Nigeria if it was valid where it took place, but for local matters, property, inheritance, immigration for a spouse, it's often necessary to register or formally document it locally as well, particularly if the original marriage certificate isn't in a form Nigerian institutions readily accept.</p>
+      <p>This becomes especially relevant when relocating back to Nigeria permanently, worth sorting out proactively rather than when a dispute or urgent need arises.</p>
+      <p class="guide-cta">Relocating with a marriage from abroad? Book a consultation to get it properly recognised.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Prenuptial and marriage contracts</div><div class="s">Protecting yourself before you marry</div></div>
+      <div><div class="t">Breach of promise to marry</div><div class="s">When an engagement falls through</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>A prenuptial agreement sets out how assets, debts, and property would be divided if a marriage ends, and Nigerian courts increasingly recognise them, though they aren't automatically binding the way they are in some other countries, a court can still review one for fairness.</p>
-      <p>In Islamic marriage, conditions can be written directly into the nikah contract itself, covering things like the right to work, education, where the couple will live, or conditions around polygamy. Both routes exist to reduce uncertainty later, and both are far more effective when drafted properly rather than as an informal understanding.</p>
-      <p class="guide-cta">Planning a marriage contract? Book a consultation to get it drafted properly.</p>
+      <p>Nigerian courts have recognised claims for breach of promise to marry, typically involving recovery of gifts, dowry, or expenses incurred in reliance on the promised marriage, though these cases require clear evidence of an actual promise and genuine reliance, not just a relationship that didn't work out.</p>
+      <p>Under Islamic practice, the return of dowry after a broken engagement is often addressed more directly through custom before it ever needs to reach a court.</p>
+      <p class="guide-cta">Dealing with a broken engagement dispute? Book a consultation.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Domestic violence: your legal options</div><div class="s">Protection, reporting, and next steps</div></div>
+      <div><div class="t">Cohabitation without marriage</div><div class="s">What rights unmarried partners actually have</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Domestic violence is a criminal matter, not just a private family issue, and several Nigerian states now have specific laws (such as Violence Against Persons Prohibition laws) allowing for protection orders that legally require an abuser to stay away. A police report and medical documentation of any injury both strengthen a case significantly.</p>
-      <p>You don't have to choose between reporting and staying safe, protection orders exist specifically to address that gap, and organisations and shelters exist in most states to support immediate safety needs alongside the legal process.</p>
-      <p class="guide-cta">If you're in immediate danger, contact the police first, then reach out for legal support.</p>
+      <p>Unlike some countries, Nigeria does not recognise "common-law marriage" simply from living together, cohabiting partners generally don't have automatic rights to each other's property or inheritance the way a married couple would, regardless of how long the relationship lasted.</p>
+      <p>Property acquired jointly can still be claimed based on actual financial contribution, but this needs to be proven, which is exactly why documentation matters even in an unmarried relationship involving shared assets.</p>
+      <p class="guide-cta">Unclear on your rights in a long-term relationship? Book a consultation.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Tenancy agreements, explained</div><div class="s">Your rights before you sign anything</div></div>
+      <div><div class="t">Boundary disputes with neighbours</div><div class="s">Resolving encroachment before it escalates</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>A tenancy agreement should clearly state the rent amount, payment schedule, duration, notice period required before eviction, and who is responsible for repairs. Verbal agreements are legally recognised in Nigeria but are much harder to enforce if a dispute arises, so a written agreement genuinely protects both sides.</p>
-      <p>Landlords generally cannot evict a tenant without proper notice, and the required notice period depends on the type of tenancy (monthly, yearly) and state tenancy law. A landlord locking you out or seizing property without a court order is typically unlawful, regardless of whether rent is owed.</p>
-      <p class="guide-cta">Before you sign anything, or if a dispute has already started, book a consultation for a proper review.</p>
+      <p>Boundary disputes often start small, a fence built a few feet over the line, and escalate quickly once construction begins. A licensed surveyor's report showing the correct boundary is the strongest evidence in these cases, and getting one early, before confrontation, is far more effective than arguing based on memory or old agreements.</p>
+      <p>Where a neighbour has built on your land, a court can order removal of the encroaching structure, but acting before construction is complete is always the stronger position.</p>
+      <p class="guide-cta">Facing a boundary dispute? Book a consultation before it escalates.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Buying land safely</div><div class="s">Title checks before you pay anyone</div></div>
+      <div><div class="t">Mortgages and property financing</div><div class="s">What to check before you commit</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Before paying for land, verify the title at the relevant state lands registry, a Certificate of Occupancy or governor's consent should exist or be transferable, and a search will show if the land is genuinely free of disputes, government acquisition, or multiple claims. Never rely solely on what the seller or local agent tells you.</p>
-      <p>Family-owned land ("omonile" situations in some areas) is a common source of dispute, since one family member may sell land that others also have a claim to. A proper deed of assignment, correctly witnessed and later registered, is what actually protects your ownership, not just receipts or a handshake agreement.</p>
-      <p class="guide-cta">Considering a purchase? A pre-purchase legal review costs far less than a dispute later.</p>
+      <p>Before taking a mortgage, confirm the property's title is genuinely clean, since lenders will require it, and a defective title can delay or kill the financing entirely after you've already paid fees. Understand the interest structure, repayment terms, and what happens on default, foreclosure processes vary and are worth understanding upfront.</p>
+      <p>Government mortgage schemes exist alongside commercial bank options, each with different eligibility and terms, worth comparing rather than assuming the first offer is the best one.</p>
+      <p class="guide-cta">Considering a mortgage or property loan? Book a consultation to review the terms.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Certificate of Occupancy, explained</div><div class="s">What it actually proves</div></div>
+      <div><div class="t">Squatters and unauthorised occupation</div><div class="s">Reclaiming property that's been taken over</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>A Certificate of Occupancy (C of O) is issued by a state government and grants the holder a right of occupancy over land, it is the strongest form of title recognition available since all land in Nigeria is technically vested in the state governor under the Land Use Act. It is not the same as outright ownership in the way some people assume, but it is what courts and buyers rely on most heavily.</p>
-      <p>A C of O can be transferred through a proper deed of assignment with governor's consent, and buying land without one, or without a clear plan to obtain one, carries real risk of a later dispute over legitimacy.</p>
-      <p class="guide-cta">Reviewing a property with or without a C of O? Book a consultation before you commit.</p>
+      <p>Someone occupying your property without permission, whether a former tenant who refuses to leave or a stranger who moved in on vacant land, cannot lawfully be removed by force, this must go through a proper court process, even though it's genuinely your property. Self-help eviction can expose you to criminal liability.</p>
+      <p>Long, uncontested occupation can in rare cases create a claim under adverse possession principles, which is exactly why addressing unauthorised occupation early, not years later, matters.</p>
+      <p class="guide-cta">Dealing with unauthorised occupants? Book a consultation to reclaim your property properly.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Landlord-tenant disputes: what to do</div><div class="s">Before it escalates to court</div></div>
+      <div><div class="t">Managing property as a landlord</div><div class="s">Staying compliant while protecting your investment</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Most disputes, unpaid rent, disagreements over repairs, disputes about deposit refunds, start with a written notice stating the issue clearly and giving a reasonable timeframe to resolve it. This creates a paper trail that matters significantly if the dispute later goes to court.</p>
-      <p>If informal resolution fails, tenancy matters typically go through the magistrate court in the relevant local jurisdiction, and a landlord cannot lawfully change locks, remove belongings, or cut off utilities to force a tenant out, this is illegal self-help eviction regardless of how much rent is owed.</p>
-      <p class="guide-cta">In an active landlord-tenant dispute? Book a consultation to understand your next step.</p>
+      <p>Beyond a solid tenancy agreement, landlords should keep clear records of rent payments, maintenance requests, and any notices issued, this documentation is what protects you if a dispute ever reaches court. State tenancy laws also place real limits on rent increases and eviction procedures, worth knowing before you act.</p>
+      <p>Renting out property without proper documentation is one of the most common sources of landlord disputes, a small amount of upfront structure prevents most of them.</p>
+      <p class="guide-cta">Managing rental property? Book a consultation to get your documentation right.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Family land and inheritance disputes</div><div class="s">When multiple relatives claim the same land</div></div>
+      <div><div class="t">Building approval and government layout rules</div><div class="s">Avoiding a demolition order before you build</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Family land disputes are among the most common and most drawn-out property cases, often involving a piece of land inherited across generations where documentation was never properly updated, or where one branch of a family sells without the consent of others who also have a legitimate claim.</p>
-      <p>Resolving these usually starts with establishing the actual chain of ownership and who the rightful successors are, sometimes through customary or sharia inheritance principles depending on the family's practice, before any sale or subdivision can be considered valid. Acting early, before a sale happens, is far easier than reversing one after the fact.</p>
-      <p class="guide-cta">Facing a family land dispute? Book a consultation to map out your options.</p>
+      <p>Building without proper approval from the relevant state physical planning authority is one of the most common causes of demolition orders in Nigeria, even on land you genuinely own. Approval requirements vary by state and by whether the land falls within an approved layout, worth confirming before construction starts, not after.</p>
+      <p>A stop-work or demolition notice can often be challenged if procedure wasn't followed correctly, but prevention through proper approval is always the stronger, cheaper path.</p>
+      <p class="guide-cta">Planning to build? Book a consultation to confirm your approvals are in order.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Registering your business</div><div class="s">CAC, structure, and what it protects</div></div>
+      <div><div class="t">Franchise agreements explained</div><div class="s">What you're actually signing up for</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Every business operating formally in Nigeria should be registered with the Corporate Affairs Commission (CAC), either as a Business Name (simpler, for sole proprietors) or a Limited Liability Company (more paperwork, but it separates your personal assets from business debts and liabilities).</p>
-      <p>Beyond CAC, you'll typically need a Tax Identification Number (TIN), and depending on your sector, additional licenses or permits. Choosing the right structure early affects your tax obligations, your personal liability if the business runs into debt, and how easily you can raise investment or take on partners later.</p>
-      <p class="guide-cta">Not sure which structure fits your business? Book a consultation before you register.</p>
+      <p>A franchise agreement should clearly define territory rights, ongoing fees, brand and quality standards you must maintain, and what happens if either side wants to exit the arrangement. Franchise disputes commonly arise from unclear territory exclusivity or vague performance expectations, both worth pinning down precisely before signing.</p>
+      <p>Whether you're the franchisor or franchisee, having the agreement reviewed protects you either way, franchise terms are often written to heavily favour one side by default.</p>
+      <p class="guide-cta">Considering a franchise arrangement? Book a consultation before signing.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">What makes a contract enforceable</div><div class="s">Beyond just signing something</div></div>
+      <div><div class="t">Shareholder disputes and winding up</div><div class="s">When a business relationship breaks down</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>A contract needs an offer, acceptance of that offer, something of value exchanged (consideration), and a genuine intention by both sides to be legally bound. A contract doesn't have to be in writing to be enforceable in Nigeria, but written contracts are far easier to prove and enforce if a dispute arises.</p>
-      <p>Common mistakes: vague terms that leave room for disagreement, no clear timeline or deliverables, missing signatures or dates, and no clause covering what happens if one side doesn't perform. A well-drafted contract protects you before a problem happens, not after.</p>
-      <p class="guide-cta">Have a contract to sign or draft? Book a consultation for a proper review.</p>
+      <p>When shareholders can't agree, on direction, exit terms, or valuation, a minority shareholder isn't without recourse, Nigerian company law provides remedies for oppression and mismanagement, including court-ordered buyouts in serious cases. Winding up a company voluntarily is a formal CAC process, not something that happens by simply stopping operations.</p>
+      <p>Reviewing what your original shareholder or partnership agreement says is always the first step, many disputes are actually resolved by terms already agreed but forgotten.</p>
+      <p class="guide-cta">In a shareholder dispute? Book a consultation to review your options.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Partnership agreements: what to include</div><div class="s">Avoiding disputes before they start</div></div>
+      <div><div class="t">Tax obligations for small businesses</div><div class="s">What you're actually required to pay</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>A solid partnership agreement should clearly state each partner's capital contribution, ownership percentage, profit and loss sharing, decision-making authority, and what happens if one partner wants to exit, is pushed out, or the business is dissolved. Verbal partnerships based on trust are exactly where the most painful disputes tend to start.</p>
-      <p>It's also worth addressing intellectual property ownership (who owns what's built), non-compete expectations, and a clear dispute resolution process, mediation or arbitration first, before either party heads to court. These clauses feel unnecessary until the moment they aren't.</p>
-      <p class="guide-cta">Starting a partnership or business relationship? Book a consultation to draft it properly.</p>
+      <p>Registered businesses in Nigeria generally owe company income tax, VAT on applicable goods and services, and state-level taxes such as business premises levy, obligations vary by business size and structure, and many small business owners underpay simply from not knowing what applies to them, not from intentional evasion.</p>
+      <p>Keeping basic financial records from day one makes tax compliance dramatically easier, and protects you if FIRS or a state revenue authority ever queries your filings.</p>
+      <p class="guide-cta">Unsure what tax obligations apply to your business? Book a consultation.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Debt recovery: getting what you're owed</div><div class="s">Formal steps that actually work</div></div>
+      <div><div class="t">E-commerce and online business rules</div><div class="s">Legal basics for selling online</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>The first formal step is usually a lawyer's demand letter, a written notice giving the debtor a set period to pay before further action, and it's surprisingly effective on its own since it signals the matter is now serious. If that doesn't work, recovery can proceed through the small claims court (for smaller amounts, a faster process) or the regular civil court process for larger sums.</p>
-      <p>Keeping clear records, invoices, written agreements, communication trails, makes a debt recovery case significantly stronger and faster to resolve.</p>
-      <p class="guide-cta">Owed money and not getting paid? Book a consultation to start recovery.</p>
+      <p>Selling online doesn't exempt you from CAC registration or consumer protection obligations, clear return policies, accurate product descriptions, and secure handling of customer payment data are all expected, and increasingly enforced under Nigeria's data protection regulations (NDPR).</p>
+      <p>Terms of service and a privacy policy aren't just formalities, they genuinely protect you from disputes over refunds, delivery delays, and data misuse claims.</p>
+      <p class="guide-cta">Running or starting an online business? Book a consultation to get the basics right.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Employment contracts and your rights</div><div class="s">For employers and employees</div></div>
+      <div><div class="t">Remedies for breach of contract</div><div class="s">What you can actually claim</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>A proper employment contract should cover role, salary, working hours, leave entitlement, termination notice period, and grounds for dismissal. Nigerian labour law requires written terms of employment to be provided within a reasonable period of starting work, and disputes are far harder to resolve fairly without this documentation in place.</p>
-      <p>Wrongful termination, unpaid entitlements, and unclear severance terms are among the most common disputes on both sides, employer and employee. Whether you're hiring or being hired, having the contract properly reviewed before signing protects you either way.</p>
-      <p class="guide-cta">Drafting or reviewing an employment contract? Book a consultation.</p>
+      <p>When the other side breaches a contract, common remedies include damages (financial compensation for your loss), specific performance (a court order forcing them to fulfil the contract), or rescission (cancelling the contract entirely), which remedy fits depends heavily on what the contract says and what you actually lost.</p>
+      <p>Courts generally compensate for actual proven loss, not simply what you hoped to gain, keeping records of your losses strengthens any claim significantly.</p>
+      <p class="guide-cta">Dealing with a breached contract? Book a consultation to assess your claim.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Your rights if arrested</div><div class="s">What the police can and can't do</div></div>
+      <div><div class="t">Theft and stealing charges</div><div class="s">What separates the two, and what to expect</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>If arrested, you have the right to be told the reason for your arrest, the right to remain silent beyond identifying yourself, and the right to contact a lawyer or a family member. You cannot lawfully be held indefinitely without charge, Nigerian law requires you to be brought before a court within a reasonable time, generally within 24 to 48 hours depending on the circumstances and how far the court is.</p>
-      <p>Torture, assault, or inhuman treatment in custody is illegal regardless of the alleged offence. If you or someone you know is arrested, the priority is getting a lawyer involved as early as possible.</p>
-      <p class="guide-cta">In an active arrest situation? Message directly on WhatsApp for urgent guidance.</p>
+      <p>Nigerian criminal law distinguishes stealing (taking property with intent to permanently deprive the owner) from related offences like obtaining by false pretences (fraud), the specific charge affects both the potential penalty and the defence strategy, so the exact wording of a charge matters more than people often assume.</p>
+      <p>Being accused doesn't mean conviction is automatic, the prosecution must prove intent, not just possession or access, which is often the strongest point in a proper defence.</p>
+      <p class="guide-cta">Facing a theft or stealing charge? Book a consultation urgently.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Understanding bail</div><div class="s">It's a right, not a favour</div></div>
+      <div><div class="t">Defamation: civil claim or criminal charge</div><div class="s">Protecting your reputation the right way</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Bail is not an admission of guilt, it simply allows you to remain free while your case proceeds. For most offences, bail is a right, either granted directly by the police for minor matters or by a court for more serious ones, often with conditions like a surety who guarantees your return.</p>
-      <p>It is illegal for police to demand payment directly in exchange for bail, this is a well-known abuse, not a legitimate process, "bail is free" is the standard reminder for a reason. Some serious offences carry restricted or conditional bail, which is where legal representation becomes especially important.</p>
-      <p class="guide-cta">Need help with a bail matter? Message directly on WhatsApp.</p>
+      <p>Defamation in Nigeria can be pursued as a civil claim for damages, or in some cases as a criminal charge for criminal libel, though criminal defamation prosecutions are less common and generally reserved for more serious cases. A civil claim requires showing the statement was false, published to a third party, and caused harm to your reputation.</p>
+      <p>Screenshots and evidence of publication, who saw it, when, and the actual harm caused, are essential to building a strong defamation case.</p>
+      <p class="guide-cta">Dealing with defamatory statements against you? Book a consultation.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">What happens at a police station</div><div class="s">Knowing the process reduces the fear</div></div>
+      <div><div class="t">Drug offences and penalties</div><div class="s">What the law actually covers</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>After an arrest, you'll typically be taken to a station, have your details recorded, and be asked to make a statement. You are not obligated to say anything beyond your identity without a lawyer present, and any statement you do give can be used later, so it's worth being deliberate rather than answering out of pressure or fear.</p>
-      <p>You have the right to know what you're being charged with, and being held without any charge for an extended period is not lawful. Requesting a lawyer, and having someone informed of where you are, are both reasonable and legal requests at any point.</p>
-      <p class="guide-cta">Need someone at the station now? Message directly on WhatsApp.</p>
+      <p>Drug offences in Nigeria are handled primarily under the NDLEA Act, and penalties vary significantly depending on the substance, quantity, and whether the charge is possession versus trafficking, a distinction that dramatically changes both the process and potential sentence. Being present where drugs are found doesn't automatically establish possession in law.</p>
+      <p>Early legal representation matters enormously in drug cases, procedural errors in how evidence was obtained are a common and legitimate line of defence.</p>
+      <p class="guide-cta">Facing a drug-related charge? Book a consultation immediately.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Criminal record and expungement</div><div class="s">Whether a past charge can be cleared</div></div>
+      <div><div class="t">Traffic offences and your rights</div><div class="s">What officers can and can't demand</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>A criminal record can affect employment, travel, and licensing long after a case is closed, and whether it can be cleared depends heavily on the outcome, an acquittal, a discharge, or a conviction each carry different implications and different paths forward. Nigeria doesn't have one single, simple expungement process the way some other countries do, so this is very case-specific.</p>
-      <p>In some cases, a formal application to the court that handled the matter, or a presidential pardon route for older convictions, may be relevant depending on the offence and outcome.</p>
-      <p class="guide-cta">Dealing with a past record? Book a consultation to review your options.</p>
+      <p>For most traffic offences, an officer should issue a proper ticket or notice rather than demanding cash on the spot, on-the-spot cash payment to an officer is not the lawful process for the vast majority of offences and is a well-documented source of abuse. You're entitled to know exactly what you're being charged with.</p>
+      <p>Vehicle impoundment must follow proper procedure too, an officer generally cannot simply drive off with your vehicle without documentation of why.</p>
+      <p class="guide-cta">Had a problematic experience with traffic enforcement? Book a consultation.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Reporting a crime: what to expect</div><div class="s">As a victim or witness</div></div>
+      <div><div class="t">Testifying as a witness</div><div class="s">What to expect, and your protections</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Reporting starts with a written statement at the police station, and it helps significantly to bring any evidence you have, photos, messages, witness contacts, at the time of reporting rather than later. You're entitled to a copy of your statement and the case reference number.</p>
-      <p>If a report isn't being taken seriously, or investigation seems to have stalled, a lawyer can help push the process along, follow up formally, or advise on a private prosecution route in genuinely serious cases where that's applicable.</p>
-      <p class="guide-cta">Need help following up on a police report? Book a consultation.</p>
+      <p>Witnesses in Nigerian criminal cases can request certain protections if they fear retaliation, and intimidating or threatening a witness is itself a criminal offence. Understanding the process beforehand, what you'll be asked, how cross-examination works, reduces the anxiety significantly for first-time witnesses.</p>
+      <p>You're not required to answer questions that could incriminate you personally, even as a witness rather than the accused, this is a real and available protection.</p>
+      <p class="guide-cta">Asked to testify and unsure of your rights? Book a consultation.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Which court handles this?</div><div class="s">Sharia, customary, magistrate, or high court</div></div>
+      <div><div class="t">Group and class action claims</div><div class="s">When many people share the same complaint</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p><b>Sharia courts</b> exist mainly in northern states and handle matters between Muslims where sharia law applies, commonly marriage, divorce, and inheritance.</p>
-      <p><b>Customary courts</b> handle matters governed by local or ethnic custom, often overlapping with family and land matters in areas where customary law is recognised.</p>
-      <p><b>Magistrate courts</b> handle smaller civil claims, minor criminal matters, and tenancy disputes up to a certain value, varying by state.</p>
-      <p><b>High courts</b> handle more serious civil and criminal matters, larger claims, constitutional questions, and appeals from magistrate, customary, or sharia courts in many states.</p>
-      <p class="guide-cta">Not sure where your matter fits? Book a consultation and we'll tell you exactly where to start.</p>
+      <p>Where multiple people have suffered from the same issue, a faulty product, a shared landlord dispute, a company's misconduct, a representative or group action can be more efficient than each person filing separately, sharing costs and strengthening the case through combined evidence.</p>
+      <p>Nigerian procedural rules allow for representative actions under certain conditions, worth exploring early if you know others affected by the same issue.</p>
+      <p class="guide-cta">Aware of others facing the same issue? Book a consultation to explore a joint claim.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">How long a civil case takes</div><div class="s">Setting realistic expectations</div></div>
+      <div><div class="t">Enforcing a judgment you've already won</div><div class="s">When winning in court isn't the end</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Timelines vary widely. Small claims or magistrate court matters can resolve in months, while High Court cases commonly take one to three years, sometimes longer with appeals, depending on court backlog, the complexity of evidence, and how cooperative the other side is.</p>
-      <p>Settlement or negotiation can shorten this significantly, and is often worth exploring before committing to a full trial timeline, though it isn't always the right move depending on what's at stake.</p>
-      <p class="guide-cta">Considering litigation? Book a consultation to talk through realistic timelines for your case.</p>
+      <p>Winning a case doesn't automatically mean payment, if the other side doesn't comply voluntarily, enforcement mechanisms exist, garnishing bank accounts, attaching property, or in some cases committal proceedings, but these require a separate, deliberate legal process to activate.</p>
+      <p>Acting promptly after judgment matters, assets can be moved or hidden the longer enforcement is delayed, so this isn't a step to leave for later.</p>
+      <p class="guide-cta">Won a case but not getting paid? Book a consultation to start enforcement.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Mediation and arbitration explained</div><div class="s">Alternatives to a full court case</div></div>
+      <div><div class="t">Injunctions: stopping something before it happens</div><div class="s">Urgent court orders explained</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Mediation involves a neutral third party helping both sides reach a voluntary agreement, it's faster, cheaper, and more private than court, though the outcome isn't binding unless both sides agree to it. Arbitration is more formal, the arbitrator's decision is typically binding, and it's commonly used for business and commercial disputes, especially where a contract already specifies arbitration as the resolution method.</p>
-      <p>Both routes can resolve a dispute in weeks or months rather than years, and are worth exploring before assuming court is the only option.</p>
-      <p class="guide-cta">Want to explore mediation or arbitration for your dispute? Book a consultation.</p>
+      <p>An injunction is a court order stopping someone from doing something, selling disputed property, demolishing a structure, continuing a harmful action, before the full case is resolved. Courts grant these where waiting for a full trial would cause harm that can't later be undone, speed matters enormously in these applications.</p>
+      <p>Interim injunctions can sometimes be obtained within days in genuinely urgent situations, but require clear evidence of the urgency and harm involved.</p>
+      <p class="guide-cta">Need to stop something urgently? Contact us immediately on WhatsApp.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Small claims: recovering money owed</div><div class="s">A faster, simpler court process</div></div>
+      <div><div class="t">Limitation periods: how long you have to sue</div><div class="s">Don't let a valid claim expire</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>Small claims courts exist in many states specifically to handle debt and money disputes below a certain value quickly, often without needing a lawyer to file, though having one still strengthens your case. The process is generally faster and less formal than a full civil trial, with judgment often reached within weeks to a few months.</p>
-      <p>Clear documentation, invoices, agreements, proof of the debt, is what makes or breaks a small claims case, since the process moves quickly and doesn't allow much room for prolonged evidence-gathering.</p>
-      <p class="guide-cta">Owed money and considering small claims? Book a consultation to get started.</p>
+      <p>Nigerian law sets strict time limits for bringing most types of claims, contract disputes, personal injury, property claims, and once that limitation period expires, you generally lose the right to sue, regardless of how valid the underlying claim is. These periods vary by claim type and state, six years is common but not universal.</p>
+      <p>If you've been sitting on a dispute for a while, checking whether you're still within time is a critical first step before anything else.</p>
+      <p class="guide-cta">Not sure if your claim is still valid? Book a consultation to check before it's too late.</p>
     </div>
   </div>
 
   <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
     <div class="guide-head">
-      <div><div class="t">Appealing a court decision</div><div class="s">What it takes, and what it doesn't fix</div></div>
+      <div><div class="t">Choosing the right legal representation</div><div class="s">What actually matters when picking a lawyer</div></div>
       <span class="chev">›</span>
     </div>
     <div class="guide-body">
-      <p>An appeal challenges how the law was applied or how the process was conducted, not simply the fact that you disagree with the outcome, so it needs a genuine legal ground, an error in law, procedure, or evidence handling, to succeed. Appeals also have strict filing deadlines, often just weeks from the original judgment, so acting quickly matters.</p>
-      <p>Appeals move through a higher court (from magistrate to High Court, or High Court to Court of Appeal) and can themselves take a significant amount of time, so it's worth weighing the strength of the grounds against the cost and time involved before proceeding.</p>
-      <p class="guide-cta">Considering an appeal? Book a consultation to assess whether you have valid grounds.</p>
+      <p>Beyond general reputation, the right lawyer for your matter has genuine experience in that specific area, family, property, criminal, business, and is upfront about costs, likely timelines, and realistic outcomes rather than overpromising a guaranteed win, no honest lawyer guarantees a specific result.</p>
+      <p>A good first consultation should leave you with a clear sense of your options and next steps, not more confusion than you started with.</p>
+      <p class="guide-cta">Ready to talk through your situation properly? Book a consultation.</p>
     </div>
   </div>
 
@@ -999,6 +1092,63 @@
     window.open(`https://wa.me/${phone}`, '_blank');
   }
 
+  let chatHistory = [];
+
+  function openChat(){
+    document.getElementById('chatOverlay').classList.add('open');
+  }
+
+  function closeChat(){
+    document.getElementById('chatOverlay').classList.remove('open');
+  }
+
+  async function sendChatMessage(){
+    const input = document.getElementById('chatInput');
+    const text = input.value.trim();
+    if(!text) return;
+    input.value = '';
+
+    const messagesEl = document.getElementById('chatMessages');
+
+    const userBubble = document.createElement('div');
+    userBubble.className = 'chat-bubble user';
+    userBubble.textContent = text;
+    messagesEl.appendChild(userBubble);
+
+    chatHistory.push({ role: 'user', content: text });
+
+    const loadingBubble = document.createElement('div');
+    loadingBubble.className = 'chat-bubble loading';
+    loadingBubble.textContent = 'Typing...';
+    messagesEl.appendChild(loadingBubble);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+
+    try{
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: chatHistory })
+      });
+      const data = await res.json();
+      loadingBubble.remove();
+
+      const reply = data.reply || data.error || "Sorry, something went wrong. Please try again or book a consultation.";
+      const botBubble = document.createElement('div');
+      botBubble.className = 'chat-bubble bot';
+      botBubble.textContent = reply;
+      messagesEl.appendChild(botBubble);
+      chatHistory.push({ role: 'assistant', content: reply });
+    } catch(err){
+      loadingBubble.remove();
+      const errorBubble = document.createElement('div');
+      errorBubble.className = 'chat-bubble bot';
+      errorBubble.textContent = "Couldn't reach the AI right now. Please try again, or book a consultation directly.";
+      messagesEl.appendChild(errorBubble);
+    }
+
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
   function toggleOtherTopic(){
     const select = document.getElementById('topic');
     const wrap = document.getElementById('otherTopicWrap');
@@ -1026,6 +1176,27 @@
     });
   }
 </script>
+
+<div id="chatOverlay" class="chat-overlay" onclick="if(event.target===this)closeChat()">
+  <div class="chat-panel">
+    <div class="chat-header">
+      <div>
+        <p class="chat-title">Ask a question</p>
+        <p class="chat-subtitle">AI pre-guidance, not a substitute for a consultation</p>
+      </div>
+      <button class="chat-close" onclick="closeChat()">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-bubble bot">
+        Salam, I can give you general guidance on Nigerian sharia and common law, family matters, property, business, criminal law, and disputes. What's on your mind? For anything specific to your case, I'll point you to book a real consultation.
+      </div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Type your legal question..." onkeydown="if(event.key==='Enter')sendChatMessage()">
+      <button class="chat-send" onclick="sendChatMessage()">→</button>
+    </div>
+  </div>
+</div>
 
 </body>
 </html>
