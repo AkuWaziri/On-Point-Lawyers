@@ -1,0 +1,1902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>On Point Lawyers Legal Consultant, sharia and common law</title>
+<meta name="description" content="Get clear legal guidance across sharia and common law: marriage, inheritance, business, property, and litigation. Book a consultation directly on WhatsApp.">
+<meta name="theme-color" content="#0A0A0A">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink: #0A0A0A;
+    --surface: #121212;
+    --surface-raised: #171717;
+    --hairline: rgba(255,255,255,0.08);
+    --hairline-strong: rgba(255,255,255,0.16);
+    --text-primary: #F5F3EE;
+    --text-secondary: #A3A3A3;
+    --text-muted: #6B6B6B;
+    --gold: #C9A227;
+    --gold-dim: #A9861E;
+    --gold-glow: rgba(201,162,39,0.35);
+    --silver: #C7CCD4;
+    --silver-dim: #9AA0AA;
+    --silver-glow: rgba(199,204,212,0.20);
+
+    --cat-family: #E0759B;
+    --cat-family-glow: rgba(224,117,155,0.32);
+    --cat-property: #5B8FDB;
+    --cat-property-glow: rgba(91,143,219,0.32);
+    --cat-business: #C9A227;
+    --cat-business-glow: rgba(201,162,39,0.32);
+    --cat-criminal: #E0645B;
+    --cat-criminal-glow: rgba(224,100,91,0.32);
+    --cat-litigation: #A87FE0;
+    --cat-litigation-glow: rgba(168,127,224,0.32);
+    --cat-digital: #45C6C6;
+    --cat-digital-glow: rgba(69,198,198,0.32);
+    --radius-sm: 16px;
+    --radius-md: 24px;
+    --radius-lg: 32px;
+  }
+
+  *{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--ink);
+    color: var(--text-primary);
+    font-family: 'Manrope', -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.5;
+  }
+  h1,h2,h3{
+    font-family: 'Fraunces', serif;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0;
+  }
+  a{ color: inherit; }
+  button{ font-family: inherit; cursor: pointer; }
+  ::selection{ background: var(--gold-glow); }
+
+  /* ambient glow field behind hero */
+  .glow-field{
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+  }
+  .glow-orb{
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(130px);
+    opacity: 0.7;
+  }
+  .glow-orb.one{
+    width: 480px; height: 480px;
+    background: var(--gold-glow);
+    top: -180px; left: -140px;
+  }
+  .glow-orb.two{
+    width: 420px; height: 420px;
+    background: var(--silver-glow);
+    top: 40px; right: -180px;
+  }
+
+  .wrap{ max-width: 480px; margin: 0 auto; padding: 0 20px; position: relative; z-index: 1; }
+
+  @media (min-width: 700px){
+    .wrap{ max-width: 640px; padding: 0 28px; }
+  }
+  @media (min-width: 1000px){
+    .wrap{ max-width: 880px; padding: 0 32px; }
+    .hero h1{ font-size: 40px; }
+    .grid-2{ grid-template-columns: repeat(4, 1fr); }
+    .guide-list{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; align-items: start; }
+    .guide-list .guide-item{ margin-bottom: 0; }
+    .template-list{ display:grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .template-list .guide-item{ margin-bottom: 0; }
+    .card{ padding: 32px; }
+  }
+  @media (min-width: 1300px){
+    .wrap{ max-width: 1040px; }
+  }
+
+  /* nav */
+  .topbar{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 20px;
+    position: relative; z-index: 2;
+  }
+  .brand{ display:flex; align-items:center; gap:6px; }
+  .brand-mark{
+    width: 36px; height: 36px; border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .brand-mark img{ width:100%; height:100%; object-fit: cover; }
+  .brand-name{
+    font-family:'Fraunces', serif; font-size:13.5px; font-weight:600;
+    color: #17140A;
+    background: #F5F3EE;
+    padding: 6px 14px;
+    border-radius: 100px;
+    letter-spacing: 0.01em;
+  }
+  .status-pill{
+    font-size: 11px; color: #4ADE9C;
+    border: 1px solid rgba(74,222,156,0.4);
+    background: rgba(74,222,156,0.08);
+    padding: 5px 10px; border-radius: 100px;
+    display:flex; align-items:center; gap:6px;
+    animation: statusBreathe 2.6s ease-in-out infinite;
+  }
+  .status-dot{
+    width:6px; height:6px; border-radius:50%;
+    background: #4ADE9C; box-shadow: 0 0 8px #4ADE9C;
+  }
+  @keyframes statusBreathe {
+    0%, 100% { box-shadow: 0 0 8px rgba(74,222,156,0.15); }
+    50% { box-shadow: 0 0 20px rgba(74,222,156,0.55); }
+  }
+
+  .nav-right{
+    display:flex; align-items:center; gap:8px;
+    flex-wrap: wrap; justify-content: flex-end;
+  }
+  .nav-book-btn{
+    font-family:'Manrope', sans-serif;
+    font-size: 11px; font-weight: 700;
+    color: #1A1400;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 7px 13px;
+    border-radius: 100px;
+    box-shadow: 0 4px 16px var(--gold-glow);
+    white-space: nowrap;
+  }
+  .nav-book-btn:active{ transform: scale(0.97); }
+
+  /* hero */
+  .hero{ position: relative; padding: 36px 0 14px; }
+  .hero-tags{
+    display:flex; align-items:center; gap:8px; flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .eyebrow{
+    display: inline-flex; align-items:center; gap:6px;
+    font-size: 11.5px; letter-spacing: 0.05em; text-transform: uppercase;
+    font-weight: 700;
+    color: #E9F1FF;
+    background: rgba(91,143,219,0.16);
+    border: 1px solid rgba(91,143,219,0.4);
+    padding: 7px 14px;
+    border-radius: 100px;
+    box-shadow: 0 4px 20px rgba(91,143,219,0.25);
+    cursor: pointer;
+  }
+  .eyebrow-rule{ width: 20px; height: 1px; background: var(--gold-dim); }
+  .hero h1{
+    font-size: 32px; line-height: 1.12; font-weight: 500;
+    color: var(--text-primary);
+  }
+  .hero h1 em{ font-style: normal; color: var(--gold); }
+  .hero p{
+    font-size: 15px; color: var(--text-secondary);
+    margin: 14px 0 0; max-width: 34ch;
+  }
+
+  /* dual-system divider, signature element */
+  .dual-divider{
+    display:flex; align-items:center; gap: 0; margin: 26px 0 22px;
+    height: 2px; border-radius: 2px; overflow: hidden;
+  }
+  .dual-divider span{ flex:1; height:100%; }
+  .dual-divider .a{ background: linear-gradient(90deg, transparent, var(--gold)); }
+  .dual-divider .b{ background: linear-gradient(90deg, var(--silver), transparent); }
+  .dual-caption{
+    display:flex; justify-content:space-between; margin-top: 2px; margin-bottom: 22px;
+  }
+  .dual-caption span{
+    font-size: 11px; font-weight: 700; letter-spacing: 0.02em;
+    padding: 6px 13px; border-radius: 100px;
+  }
+  .dual-caption .l{
+    color: #1A1400;
+    background: var(--gold);
+    box-shadow: 0 4px 18px var(--gold-glow);
+  }
+  .dual-caption .r{
+    color: #12151C;
+    background: var(--silver);
+    box-shadow: 0 4px 18px var(--silver-glow);
+  }
+
+  /* profile card */
+  .card{
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-lg);
+    padding: 26px;
+    position: relative;
+  }
+  .card + .card{ margin-top: 20px; }
+
+  .profile-row{ display:flex; align-items:center; gap: 14px; }
+  .avatar{
+    width: 52px; height: 52px; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #1c2333, #0d1119);
+    border: 1px solid var(--hairline-strong);
+    display:flex; align-items:center; justify-content:center;
+    overflow: hidden;
+    box-shadow: 0 0 0 1px rgba(201,162,39,0.18), 0 0 40px rgba(201,162,39,0.28);
+    flex-shrink:0;
+  }
+  .avatar img{ width:100%; height:100%; object-fit: cover; }
+  .profile-name{ font-size: 16px; font-weight: 700; margin: 0; }
+  .profile-role{ font-size: 12.5px; color: var(--text-secondary); margin: 3px 0 0; }
+  .book-tab{
+    display:inline-flex; align-items:center; gap:6px;
+    margin-top: 10px;
+    font-family:'Manrope', sans-serif;
+    font-size: 11.5px; font-weight: 700; letter-spacing: 0.02em;
+    color: #1A1400;
+    background: var(--gold);
+    border: 1px solid var(--gold);
+    padding: 8px 16px;
+    border-radius: 100px;
+    box-shadow: 0 6px 24px var(--gold-glow);
+  }
+  .book-tab:active{ transform: scale(0.98); }
+  .tag-row{ display:flex; gap:6px; margin-top: 10px; flex-wrap: wrap; }
+  .tag{
+    font-size: 11px; padding: 4px 9px; border-radius: 100px;
+    border: 1px solid var(--hairline-strong); color: var(--text-secondary);
+  }
+
+  /* quick actions grid */
+  .grid-2{
+    display:grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 18px;
+  }
+  .action{
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm);
+    padding: 14px;
+    text-align: left;
+    display:flex; flex-direction: column; gap: 10px;
+    transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+    color: var(--text-primary);
+  }
+  .action:hover{
+    border-color: var(--hairline-strong);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  }
+  .action .ic{
+    width: 26px; height: 26px; border-radius: 8px;
+    display:flex; align-items:center; justify-content:center;
+    font-size: 13px;
+  }
+  .action.a .ic{ background: rgba(201,162,39,0.14); color: var(--gold); }
+  .action.b .ic{ background: rgba(201,162,39,0.14); color: var(--gold); }
+  .action.c .ic{ background: rgba(199,204,212,0.10); color: var(--silver); }
+  .action.d .ic{ background: rgba(199,204,212,0.10); color: var(--silver); }
+  .action span{ font-size: 12.5px; font-weight: 600; }
+
+  /* section label */
+  .section-label{
+    font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase;
+    color: var(--text-muted); font-weight: 700; margin: 42px 0 16px;
+  }
+
+  /* guide category tabs */
+  .guides-glow-wrap{
+    position: relative;
+    border-radius: var(--radius-lg);
+    padding: 18px 16px 4px;
+    margin: 0 -16px;
+    transition: background 0.4s ease;
+  }
+  .guides-glow-wrap::before{
+    content:'';
+    position:absolute; inset: -20px 0 0 0;
+    height: 220px;
+    border-radius: var(--radius-lg);
+    filter: blur(70px);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+    transition: background 0.4s ease;
+  }
+  .guides-glow-wrap > *{ position: relative; z-index: 1; }
+  .guides-glow-wrap.glow-family::before{ background: var(--cat-family-glow); }
+  .guides-glow-wrap.glow-property::before{ background: var(--cat-property-glow); }
+  .guides-glow-wrap.glow-business::before{ background: var(--cat-business-glow); }
+  .guides-glow-wrap.glow-criminal::before{ background: var(--cat-criminal-glow); }
+  .guides-glow-wrap.glow-litigation::before{ background: var(--cat-litigation-glow); }
+  .guides-glow-wrap.glow-digital::before{ background: var(--cat-digital-glow); }
+
+  .tab-bar{
+    display:flex; flex-wrap: wrap; gap:8px; margin-bottom:16px;
+  }
+  .tab-btn{
+    flex: 1 1 auto; white-space:nowrap; text-align:center;
+    font-family:'Manrope', sans-serif; font-size:12px; font-weight:600;
+    color: var(--text-secondary);
+    background: var(--surface);
+    border: 1px solid var(--hairline);
+    padding: 9px 10px; border-radius: 100px;
+    transition: all 0.15s ease;
+  }
+  .tab-btn.active{ color: #17100A; box-shadow: 0 4px 20px rgba(0,0,0,0.3); }
+  .tab-btn[data-cat="family"].active{ background: var(--cat-family); border-color: var(--cat-family); box-shadow: 0 4px 20px var(--cat-family-glow); }
+  .tab-btn[data-cat="property"].active{ background: var(--cat-property); border-color: var(--cat-property); box-shadow: 0 4px 20px var(--cat-property-glow); }
+  .tab-btn[data-cat="business"].active{ background: var(--cat-business); border-color: var(--cat-business); box-shadow: 0 4px 20px var(--cat-business-glow); }
+  .tab-btn[data-cat="criminal"].active{ background: var(--cat-criminal); border-color: var(--cat-criminal); box-shadow: 0 4px 20px var(--cat-criminal-glow); }
+  .tab-btn[data-cat="litigation"].active{ background: var(--cat-litigation); border-color: var(--cat-litigation); box-shadow: 0 4px 20px var(--cat-litigation-glow); }
+  .tab-btn[data-cat="digital"].active{ background: var(--cat-digital); border-color: var(--cat-digital); box-shadow: 0 4px 20px var(--cat-digital-glow); }
+
+  .guide-item[data-hidden="true"]{ display:none; }
+  .guide-item[data-cat="family"]{ border-left: 3px solid var(--cat-family); }
+  .guide-item[data-cat="property"]{ border-left: 3px solid var(--cat-property); }
+  .guide-item[data-cat="business"]{ border-left: 3px solid var(--cat-business); }
+  .guide-item[data-cat="criminal"]{ border-left: 3px solid var(--cat-criminal); }
+  .guide-item[data-cat="litigation"]{ border-left: 3px solid var(--cat-litigation); }
+  .guide-item[data-cat="digital"]{ border-left: 3px solid var(--cat-digital); }
+  .guide-item[data-cat="family"] .chev{ color: var(--cat-family); }
+  .guide-item[data-cat="property"] .chev{ color: var(--cat-property); }
+  .guide-item[data-cat="business"] .chev{ color: var(--cat-business); }
+  .guide-item[data-cat="criminal"] .chev{ color: var(--cat-criminal); }
+  .guide-item[data-cat="litigation"] .chev{ color: var(--cat-litigation); }
+  .guide-item[data-cat="digital"] .chev{ color: var(--cat-digital); }
+
+  /* guide list, accordion */
+  .guide-item{
+    padding: 16px 18px; border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm); margin-bottom: 12px;
+    background: var(--surface);
+    cursor: pointer;
+    transition: border-color 0.15s ease;
+  }
+  .guide-item.open{ border-color: var(--hairline-strong); }
+  .guide-head{ display:flex; align-items:center; justify-content:space-between; }
+  .guide-item .t{ font-size: 13.5px; font-weight: 600; }
+  .guide-item .s{ font-size: 11.5px; color: var(--text-muted); margin-top:2px; }
+  .chev{ color: var(--text-muted); font-size: 16px; transition: transform 0.2s ease; }
+  .guide-item.open .chev{ transform: rotate(90deg); color: var(--gold); }
+  .guide-body{
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.3s ease, margin-top 0.3s ease;
+  }
+  .guide-item.open .guide-body{ max-height: 900px; margin-top: 14px; }
+  .guide-body p{
+    font-size: 12.5px; line-height: 1.7; color: var(--text-secondary);
+    margin: 0 0 10px;
+  }
+  .guide-body b{ color: var(--text-primary); }
+  .guide-body .guide-cta{
+    color: var(--gold); font-weight: 600; font-size: 12px; margin-top: 4px;
+  }
+  .tpl-btn{
+    width:100%; margin-top: 6px; border:none; border-radius: var(--radius-sm);
+    padding: 11px; font-size: 12.5px; font-weight: 700;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid var(--hairline-strong);
+    color: var(--text-primary);
+  }
+  .tpl-btn:active{ transform: scale(0.98); }
+  .tpl-hint{
+    font-size: 11.5px; color: var(--text-muted); margin: -8px 0 14px;
+  }
+
+  /* booking form */
+  .field-label{ font-size: 12px; color: var(--text-secondary); margin: 0 0 6px; font-weight: 600; }
+  select, input[type=text]{
+    width: 100%; background: var(--surface);
+    border: 1px solid var(--hairline-strong);
+    color: var(--text-primary); font-family: 'Manrope', sans-serif;
+    padding: 12px 14px; border-radius: var(--radius-sm); font-size: 14px;
+    margin-bottom: 16px; outline: none;
+  }
+  select:focus, input:focus{ border-color: var(--gold); box-shadow: 0 0 0 3px rgba(201,162,39,0.15); }
+
+  .fee-note{
+    display:flex; align-items:center; gap:10px;
+    background: rgba(201,162,39,0.07);
+    border: 1px solid rgba(201,162,39,0.2);
+    border-radius: var(--radius-sm); padding: 12px 14px; margin-bottom: 18px;
+    font-size: 12.5px; color: var(--text-secondary);
+  }
+  .fee-note b{ color: var(--gold); font-weight: 700; }
+
+  .btn-primary{
+    width:100%; border:none; border-radius: 20px;
+    padding: 18px; font-size: 14.5px; font-weight: 700;
+    background: var(--gold);
+    color: #1A1400;
+    box-shadow: 0 10px 50px var(--gold-glow), 0 0 60px rgba(201,162,39,0.18);
+    display:flex; align-items:center; justify-content:center; gap:9px;
+  }
+  .btn-primary:active{ transform: scale(0.98); }
+
+  footer{
+    text-align:center; padding: 40px 20px 30px;
+    color: var(--text-muted); font-size: 11.5px;
+  }
+  .disclaimer-tab{
+    max-width: 420px; width: fit-content; margin: 0 auto 18px; line-height:1.5;
+    font-size: 12px; font-weight: 600; color: #FFD9D6;
+    background: rgba(224,100,91,0.10);
+    border: 1px solid rgba(224,100,91,0.35);
+    border-radius: var(--radius-sm);
+    padding: 12px 16px;
+    box-shadow: 0 0 30px rgba(224,100,91,0.28);
+    text-align: center;
+  }
+
+  /* testimonial marquee */
+  .testimonial-marquee{
+    overflow: hidden;
+    margin: 0 -20px 8px;
+    padding: 4px 0;
+    mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+    -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  }
+  .testimonial-track{
+    display:flex; gap:10px; width: max-content;
+    animation: marqueeScroll 32s linear infinite;
+    padding-left: 20px;
+  }
+  .testimonial-marquee:hover .testimonial-track{ animation-play-state: paused; }
+  @keyframes marqueeScroll{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
+  .t-card{
+    flex-shrink:0; max-width: 240px;
+    font-size: 12px; line-height:1.5; font-weight:500;
+    padding: 12px 14px; border-radius: var(--radius-sm);
+    border: 1px solid; white-space: normal;
+  }
+  .t-lang{
+    display:inline-block; font-size: 10px; font-weight:800;
+    letter-spacing: 0.04em; margin-right:6px;
+    padding: 2px 6px; border-radius: 100px;
+  }
+  .t-en{ background: rgba(91,143,219,0.10); border-color: rgba(91,143,219,0.35); color: #CFE0F7; }
+  .t-en .t-lang{ background: #5B8FDB; color: #08101d; }
+  .t-ha{ background: rgba(69,198,198,0.10); border-color: rgba(69,198,198,0.35); color: #CFF3F3; }
+  .t-ha .t-lang{ background: var(--cat-digital); color: #06201f; }
+  .t-yo{ background: rgba(212,168,87,0.10); border-color: rgba(212,168,87,0.35); color: #F5E7CF; }
+  .t-yo .t-lang{ background: var(--gold); color: #1A1400; }
+
+  @media (prefers-reduced-motion: reduce){
+    .testimonial-track{ animation: none; }
+  }
+
+  /* category entry rows (landing page) */
+  .cat-entry-list{ display:flex; flex-direction:column; gap:10px; margin-bottom: 8px; }
+  .cat-entry{
+    display:flex; align-items:center; gap:12px;
+    width:100%; text-align:left;
+    background: var(--surface); border: 1px solid var(--hairline);
+    border-radius: var(--radius-sm); padding: 16px 18px;
+    font-family:'Manrope', sans-serif; font-size: 13.5px; font-weight: 600;
+    color: var(--text-primary);
+  }
+  .cat-entry .chev{ margin-left:auto; color: var(--text-muted); font-size:16px; }
+  .cat-dot{ width:10px; height:10px; border-radius:50%; flex-shrink:0; }
+  .dot-family{ background: var(--cat-family); box-shadow: 0 0 10px var(--cat-family-glow); }
+  .dot-property{ background: var(--cat-property); box-shadow: 0 0 10px var(--cat-property-glow); }
+  .dot-business{ background: var(--cat-business); box-shadow: 0 0 10px var(--cat-business-glow); }
+  .dot-criminal{ background: var(--cat-criminal); box-shadow: 0 0 10px var(--cat-criminal-glow); }
+  .dot-litigation{ background: var(--cat-litigation); box-shadow: 0 0 10px var(--cat-litigation-glow); }
+  .dot-digital{ background: var(--cat-digital); box-shadow: 0 0 10px var(--cat-digital-glow); }
+  .dot-templates{ background: var(--gold); box-shadow: 0 0 10px var(--gold-glow); }
+
+  /* install banner */
+  .install-banner{
+    display:none;
+    position: fixed; left: 16px; right: 16px; bottom: 16px;
+    max-width: 448px; margin: 0 auto;
+    background: var(--surface-raised);
+    border: 1px solid var(--hairline-strong);
+    border-radius: var(--radius-md);
+    padding: 14px 44px 14px 14px;
+    align-items: center; gap: 12px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5), 0 0 30px var(--gold-glow);
+    z-index: 80;
+  }
+  .install-banner.show{ display:flex; }
+  .install-icon{
+    width: 38px; height: 38px; border-radius: 10px; flex-shrink:0;
+    background: rgba(201,162,39,0.14); color: var(--gold);
+    display:flex; align-items:center; justify-content:center; font-size: 18px;
+  }
+  .install-text{ flex:1; min-width:0; }
+  .install-title{ font-size: 13px; font-weight:700; margin:0; color: var(--text-primary); }
+  .install-sub{ font-size: 11px; color: var(--text-secondary); margin: 2px 0 0; line-height:1.4; }
+  .install-btn{
+    flex-shrink:0; font-size: 12px; font-weight:700;
+    color: #1A1400; background: var(--gold); border:none;
+    padding: 9px 14px; border-radius: 100px;
+    box-shadow: 0 4px 16px var(--gold-glow);
+  }
+  .install-close{
+    position:absolute; top:8px; right:8px;
+    width:22px; height:22px; border-radius:50%;
+    background: var(--surface); border: 1px solid var(--hairline-strong);
+    color: var(--text-muted); font-size: 10px;
+  }
+
+  /* full-screen page overlay (guides / templates detail) */
+  .page-overlay{
+    display:none;
+    position: fixed; inset: 0;
+    background: var(--ink);
+    z-index: 90;
+    flex-direction: column;
+  }
+  .page-overlay.open{ display:flex; }
+  .page-panel{ display:flex; flex-direction:column; height:100%; }
+  .page-header{
+    display:flex; align-items:center; gap:12px;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--hairline);
+    flex-shrink:0;
+  }
+  .page-back{
+    background: var(--surface-raised); border: 1px solid var(--hairline-strong);
+    color: var(--text-primary); font-size: 12.5px; font-weight:600;
+    padding: 8px 14px; border-radius: 100px;
+  }
+  .page-title{
+    font-family:'Fraunces', serif; font-size: 15px; font-weight:500; margin:0;
+  }
+  .page-body{
+    flex:1; overflow-y: auto;
+    padding: 18px 20px 40px;
+  }
+
+  /* AI chat modal */
+  .chat-overlay{
+    display:none;
+    position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+    align-items: flex-end;
+    justify-content: center;
+  }
+  .chat-overlay.open{ display:flex; }
+  .chat-panel{
+    width: 100%; max-width: 480px;
+    height: 82vh; max-height: 720px;
+    background: var(--surface);
+    border: 1px solid var(--hairline-strong);
+    border-radius: 28px 28px 0 0;
+    display:flex; flex-direction: column;
+    overflow: hidden;
+  }
+  .chat-header{
+    display:flex; align-items:center; justify-content:space-between;
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--hairline);
+  }
+  .chat-title{ font-family:'Fraunces', serif; font-size:15px; font-weight:500; margin:0; }
+  .chat-subtitle{ font-size:11px; color: var(--text-muted); margin: 3px 0 0; }
+  .chat-close{
+    background: var(--surface-raised); border: 1px solid var(--hairline-strong);
+    color: var(--text-secondary); width:30px; height:30px; border-radius:50%;
+    font-size: 13px;
+  }
+  .chat-messages{
+    flex:1; overflow-y:auto; padding: 18px 20px;
+    display:flex; flex-direction: column; gap: 12px;
+  }
+  .chat-bubble{
+    font-size: 13px; line-height: 1.6; padding: 12px 15px;
+    border-radius: 16px; max-width: 85%;
+  }
+  .chat-bubble.bot{
+    background: var(--surface-raised); color: var(--text-primary);
+    border: 1px solid var(--hairline); align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .chat-bubble.user{
+    background: var(--gold); color: #1A1400; font-weight: 600;
+    align-self: flex-end; border-bottom-right-radius: 4px;
+  }
+  .chat-bubble.loading{
+    background: var(--surface-raised); border: 1px solid var(--hairline);
+    align-self: flex-start; color: var(--text-muted); font-style: italic;
+  }
+  .chat-input-row{
+    display:flex; gap:8px; padding: 14px 16px;
+    border-top: 1px solid var(--hairline);
+  }
+  .chat-input-row input{
+    flex:1; margin:0; background: var(--surface-raised);
+    border: 1px solid var(--hairline-strong); color: var(--text-primary);
+    padding: 12px 14px; border-radius: 100px; font-size: 13px; outline:none;
+  }
+  .chat-send{
+    width: 42px; height: 42px; border-radius: 50%; border:none;
+    background: var(--gold); color: #1A1400; font-size: 16px; font-weight: 700;
+    box-shadow: 0 4px 18px var(--gold-glow); flex-shrink:0;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    .action{ transition: none; }
+    .status-pill{ animation: none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="glow-field">
+  <div class="glow-orb one"></div>
+  <div class="glow-orb two"></div>
+</div>
+
+<div class="topbar wrap">
+  <div class="brand">
+    <div class="brand-mark"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAIAAABt+uBvAAAleklEQVR42u18eXxVRbbuqtrTmc9JTnIykIkMQBLCPAQMU6OAqGDTiijwbBQFtJ1abLsdQO1GftraPhuB1tvq634oqK12OwAqg0wyzwQwIXNyMp+T5ORMe++qen8UOR0ZkjB5733X+vEHSfZQ66tVa/jWqo1MJhP8NC4+8E8Q/ATQTwD9BNB/4hD/K0wCoR/8BAAADAAY+x8JEEIIIWAMGGOUMv6fTjAxAMShQQghjDD6wS3/3wKEEAIASqmm6bpOEQJJwoqCJVmUZSwKGAADRogxxhgwpOtU10lY1cNhomk6Y1gUsSgKGGOAHw8p8UfDJRzWCNFFEZtMBqtFlmWBIeAoqGE9pKs6AQbA1UXAIEpYFLHBIIuiCAChsO5v19r9IUpBELAsSz8OUujaBYoIIcYY0UlYVQGYzWa0OYySKKqqHgyogYCqhnXKaPfPAawoksksWsyKIAuaSlq8/vb2MACSZVkUBf6i/04AIYQYo5qma5oGCMfEmOx2o6bR1pZQW1uQdQJFELDdbtW1MMagyCIAxMa6FEUuLasghKmqHlZJZ+EFQbBalSiHWRAET4vf0+wHoJIkiaKIMb4WMF1lgPhi6rquqhoAi4m1OaKMwUC4saFdVXV+jc1mGjdmZGZGanSUPTc3WxDFP/x+ma+9nVKkE/13v/1dZmbmggX3ybKIMUIIGGWqRusbPN5WPfIio1GOibUqiuhpbvd4/AAgSTK3UFcXpqtsg3RdU1WdMWqxGhIS7KGQVlXhDYdVALBaJFes1WJWZNnw81tvwYLh7nn3PfPM0o8++qSoqALgrFpZo9J0sBeVNEUiAJNJwUCef/7pvNy+L764rKKyprVNbfYGqiqbJVlKTHQ4oi21bm8woOo64tp0FTedeLUUh1KqqhohOgAkJUcbjWJ1lScY1AAg2iG6Ym0TJlz/2ONPDR9R0Npau/++XwPA1Jtvr6ysKio6LYoiIUwQBEJIlMPm9TRijARB0HUdY8HvD99ww+RHfv0cRvAf735y7ERpr8SooUP6VFTWlZQ2VJQ3ms2GpGRnuy9Y625RVZUQXZJkQRCuCkb4qqCjaVooFCJENxikPn3jNZUWFzUQAumpUU/9Zv6C++8/XexZ+9Hm9IwBkyffhBCSJBEhVF9fN3LkyIgzopQyxqKiopqbPZQyAISxQClNSEhYt+79p5/67d69exJ7JTd7g8cK3UufX/HUU0+npVhSepnDoVDx97UIocysOEkSCKHhcFhV1f8qqUY4HNZUjTFmd5jS0mIrKprr61tinXKfdAelMHXavBdfWvn3v//f9raWlStXPP74rxnjoSArKipKS0vjuEQctsViaWlpAQBN0wghjLF169bZbLZ33nlX10lyUhJC4HRGDx4ydP1Xu8+UtU2bfvu4gv7pqVH1tW21tS0ZGS6LxcAY0zQ9HA4zxtAP4/QfDyC+z0OhkK7rDJgr1h4bYz19utZilHP7Ri9evHjQsCnlVd633npT09QpUyafOn26qKgoNzc3Oztb0zQAKCkpGTp0KI+S+NMQQoSQBx544MiRI0eOHJk/f/7LL7983XXXbdq06eDBgyNGjLBarYzB8OEjRFH85OOPnnzyyRUr3739zofDYb1flkNEtPhMY0JidHS0BYARQkOhECHkSjDCl40OISQUCvFlj0uIMpiUstLGnL5xKUlRpZU+hzPjL39ZbbPZ/vWvf7W3+3/3u9999dVXb7zxhtlsvv/++/lDvvvuuz179pxjLH7+85/fcsstzz///FtvveV2u+Pi4ubNm3fjjTdOmjRp//79aWlpADB58uRdu3YtWLDg+eefq611t7Z6a+p8/fqPGz9uZHqKvbKi0WY3xsRaedbCl/DyMTJd+jCbzQaDIRIlJ8Q7EpOizSYlt2+M1Qwdvtzq8/lWrlwJAO+8887u3bsBYObMmfX19bt27eKOpueTlCQJAJYsWVJaWgoA33zzTWlpaXt7+7Rp00pKSkaNGjV16o2MsRm/mGkx4cF5CTarISklKibGAgAIYQBQFMVsNl+GsHB56CB0Fp1Ylz0hKdoZZc7pEz1gQM7HH/+zuLj4xRdfBIB77rmHMZaRkZGRkcEYGzt2LAAkJye7XK4IuOfDhDEWBEEQBB778YEQwhg7nc6xY8fGxcUFg0HG2JQpUzIzMysrKydPnswYe+655wAgISGxT5/M/tlxCXG2pJToqChzJA2+PIzgUtExGo0IIc5J2O2mpBRnYrwjp48rKyurrr5h3bp1r776KmPs3XffBYCjR4/u3LmTK9HUqVMFQbhyn2AwGP7whz8sXLgQAB588MGysjKPx/P2229zuG+77ReHDh0GQP37JfROdaakxZpMcuTey8Do0gA6i87ZiUrJqc7U5KgBuYkAsHHjxrVr3+d/uuOOOxhjgwYNysvLI4QMGzbsh1wHumzD1xlijPGaNWsYYx9++CEAyLKMEFq6dGlpaakgiACQlR6b2y8+JTWm8442Go2XhBG+RI+ucl+DMY5x2UyyaDbJxwrdCMHAgQPWr98giqLJZPrggw9KSkpuvfXW48ePDxky5OjRo3ybcF9+2fEbY4wQwjMyURQppVu2bPn000/nzJkTiRJGjBjx2WefEaI77Pbi0sZgUHNFG2PjrBF/H3EsV9mLIYRUVaWUIASMsahoS5RNwQAnv68XBIwQLi+vmDdvnq7rgUCAL1RFRQVC6OjRo5qmRYKdqzIIIbqu8507Y8YMVVURQrquM8YyMzNHjhy5cePGGrf7j398ubSiubU11Ds5ymY3cowYY+FwuOdaLHAH0S06uq5rmsZpPVkWMzJiEKUnTtdF8oyqqqpnn302ISGhqanpT3/6k8PhePjhh3Vdv1oh/4WXt0MxueQvvPDCjBkz3G53VVXVu+++u3PXroryCo834LAakpKja9ytHUwuO2e3XgU339npZGXFFYzKEEUhsVfioUOHTp8+PWLECAB44IEHAoEAIWTXrl0pKSlcgB+B9OOiLlq0iDG2YMGCzn+y2Wy9eiUCwLjrMvtlJ3Tmv41GY48E75buQAiFw2EeazHG7HZz/vDk3Xsr2nzB/fv3t7S0REdHGwyGvLw8SmlMTEx0dHRRUVFkVSNJ+cXUKGKbLsFac7XtuAVjTCkdO3Zsbm7u6tWreXygquqwYcM+/fTT0tLScePGmYzKxAl9t+0sbmsL8skIgmAwGLp/bw9jwkjENW5sv6z0OAB45plnDh06BACzZs1yu908fonIHNEdhKAn+73zLZdbDvm3NgHAo48+6vf7N23aVFFROXfuHABITY4dP7Zv5+CrJ16/+y3G580fmpISff34HABwOOw+n2/37t29e/c+cuTI008/zSd3jpy4YyrRUcrFhLRarZx1vmDceEFEkhMdA/s7eYEII3T2Pxhz3cnIyPj0008ZY5qmZWZmTpo0qaGhwWqxAMDIYWkJ8fbIcxBCVxQHmc1mRVE6xS940s+y7TYjn01BQUF1dbWmaTwUPEc8hAAjAECx0criRSkTRscBwDkqwqPkv/71r0ePHn3ppZcGDhzYQ4xMBunRe9KWPJoQF2vkysdv4kAvW7aMR2FPPvkk1/GtW7e+/vrrAGAxG0cNT46kATx66lqJoGfqAwCQlBg1eEBy52AvPj5+8+bN7e3td999tyRJnbcVH317W//6UtJvH0zECJ8vOL/+ueeeKy8vb2pqKi8vv/POO7s17fzV0Xbp3T8mrl4W3zvZDAh37GWEEIqJiamsrBw9ejTGuKamZsGCBUlJSddff70gYADI6edKSrR3znUuU4POUR8AyB+WbDTIETn5bscYr169mjHWr1+/Dr+LAXBstDUtybJ6edzfXnHFOIwAXKHOKR+iW2655dixYxUVFXv37j158mQwGOQESNcY8T+Oy3d89k7M0w85x4+In1gQxzGKeLTS0lKE0MSJEznokZcajNKEMVkY4R4qEe6SYNY7HBCLdZoDQS0YUgVB5LaGEMLdx6JFi0aOHFlcXAwAAJQxNmqo7ebrYyZfZ0hOoOu+1JtaQhhjyi4QGU+YMKGtra20tNRmsyGEHn744bKysm4ZZUoBY7R9r3/DNhg+SLSY1XEjTcPyrIwBMCYIwurVq30+35IlSzZv3rx27VpBEObOnbtq1SqMUCiohVSa3CsqElvzCPOSqxqMsWAwGPHWI4akFJU1tXgD5/gLznVRSiM7KzpKXvrrhO07/VNvwIXfs3WfB+vq/eSH8HBk09PTjxw50tLSUlRU5PP5ZFmeO3eux+PpFiDup5MTbL3i5RuuQ6Ikl1SE8rJNv13upowhBJTSwYMHK4py9OjRuXPnLlq0aNCgQQAwKj9/7759cS5Hbj/X5m3fR15kMBguFtDiLkLnCFIWs8FsMbR4g4qiLF26dPLkyZxg55QopTTi6RiDKWNtWli12sUzJXjPfjKpIJpSdo4B4tfPnz/farUmJydPmDBh6NChjY2NFosl4tG6zMoAAFp9wanjrVt3B4vLaTAgxLtIdpaJ1+8FQTh8+HBqampZWdmbb76Zm5s7ePDglStXPvTww4yxxqY2LAjRDlNnJbq0XCySFmKMACA9NcbjDQIwk8l40003bdy40e12//nPfx4zZozBYPi3BoEQG2XrmyU1NpM9h9RdBwOzbzMfOOphHR0bndE3m83z58/n3DPnid58883KysqesH8MAGPU1q7tPeR7YJ6jvCq4dW+7rtEheaZRg+N5yIYx7tu373fffTdw4MCDBw8KgvDCCy+MHj3abrcTQmrr21JTojondxfT2YsCxGXmd7niTJXVXgDweltGjBiRkJDw6quvzp07d/v27WvXruUrBgAZaaaBOVazUa92E4zDv7rHcrgwdLzIjzGcY4AMBsOjjz5KKSWEcPd35syZp556avLkyZmZmZRSQRC6ttOUMozR+m3ePQfDTz5oGpCtVFSLmhbslyWmp5p0XWOM8tTs2LFjiYmJK1asyMvLS0lJSU5OAoDa+ja73RSpMnKFuODC4IvxzRHzbLMqDFBLy1nrk5ubO3v27JtuukkUxZKSko0bN3YoGhqUYw6F/L52arOITz9oPVxI/v6PVoQRY+gc9EOhUEpKypkzZ7Zt21ZSUkII+eijjxRFWb169cqVKwcPHkwI6RYmxhhD5M013m/3qP/rFwaTQv0BwWhQhw8ynvVoosgzRF4p2bRp07Zt20pKShHCra0BnTBnlKnbXOeiGhTpZYp3Wdv9KmPUZrN9++23R48efeyxxw4cODB16tT+/fu/+eabCIGm6xjwgL6SKDJ/ABeMIMWV7O21gbCqwg8JIISQKIoFBQUDBgxITU0VRbGwsHDTpk0vv/zypEmT/vWvfwUCgUOHDq1bty4rK4vDxOPJi1kiRRaOnzLsO0qy+2mMUpNJy0jhsTWihNhstpdeeunDDz+8+eabx40bN3369FAoBMB0TW/zhWOd5vNEvnQ+yOEwNTb5AcDpdCYkJAiCEAqFamtra2pqwuEwxgKfa4JLSk2hWAC7DZVWw76DbPQQK0KAEItEPZydMBqNf/vb31JSUqqrq3v16jVw4MBt27ZpmiYIwmOPPXbXXXfNnTs3Pz+/qKjorbfeysnJoZRyX8nDix/gwyAYJhOuE8ur1E07hOgok4iowyYgwJyZ4wvw3HPPUUq3b9/u8/kiQHhb/Saz3G2ejLtm8DBGJpPS0hoEgLKysv79+48ZM+arr7564oknSkpKVqxYQSkRBQEAbHbRYNCi7fhkkfLNVv3WG6XqOl+kUYxPl4vq8/lmzJjR0NDQp0+fcDi8d+/e5cuX+/1+vq+DweCaNWv69Onz1FNPzZs3r7Cw8L333svPz+dmImLvOrwh0nR96862ObdZThWRo4Ukyo5EgUoi5vva6/VOnTpVUZRevXqJorh48eK77rqLIxIMaJKIDQbpkgkzboO4kbaYDS6XpbzKS3SCMSaEVFZWrl+//pVXXtm9e3dhYWEkrrOaxBvGyMVl5ItN/gfvsba0kfc+beMtCYwBxtjlcnE+2GKxeDye3bt3Y4x79+6dkpKyfv16QRAsFovJZLLb7aFQiKd4b7/9ttFovOeee+bPnz927Fi/319UVMQD1A7jihDCVTXaoFzjiEGweWdg9HCJEmnLrgChFGMBgFksltOnTxcXF48YMeL111+fPn36oUOHiouLJVGKchgCQTUQ1HhYd0EK7QKBImdXdV1jDOJdtrTe0fsOVDLKGGO33nrrfffdxxh777331q5dG9EOAePkRPMLj5u27tEZhRk3CktfCx0+7hMwUAYmk+m+++4bMmRIOBzmsmGMQ6EQpdRisVit1tbW1og3URTlwIEDb7/9djgc5hHA+PHj//znP+fl5QHAnj17lixZ8s0333BhCKEYA6Usr4/1+SdMm3fg3qnM69HXb5ULixsoRTrRFi9evHDhwuHDh2/ZsuWDDz4IBAJjxoy5/fbbbVZT7zSH1xuorG5BCERRkmX5/O3WTVRmMkrhMEEIU6bPnj17zZo1x44dkyTp/fffz8nJefbZZwWMdUKSEkyJseaKapoUKycl0e372OHjft6CyXSybNmyRx55pOcsz5w5c5KTkxcvXixJEqX022+/zc/Pf+SRRx599NH8/Pyvv/76iSeeeOWVV87aAQoIQYWbfL0dhuSqCIk797MoB5MlFAgzAHA4HNu2bfN6vU6ns7i4WJKk2NhYACA6UTXVoEhX1P5iUMRQSKeEIISfeeaZJ5988uWXXwaAefPmvf7666+99prH4wGAuBjZbCKnz+hTxrNWn7DtO5KSZK2sbqEUGwwGXdc3bNigadr5zuh8F8stK6f7ePeBIAiBQGD58uVr1qz55S9/OWvWrBkzZoiiKIriH//4R1VVGWNjRkbv3NOemSomutiZEnVgfwUhxCgFgAMHDqxYsWLixIkul0vTtBUrVrz/3nsAQBgEQ8ysCNB1v/EF8/iIYRqQk5ie7gKA6OjokpKS+Ph43qEEAN9//z3PvAFg2CD7A3MT8voaP/8/8Tdf75gyPn74ADuPEgYMGKDruqqq4Z4NfiWldMiQIZGkpDPHLstyXFzchx9+yHtl+C+n3xBzxy2uGwpsq/6QkJ5kemFxqskocedpMBi2b9/OGNu3b5/T6XzssceinU5OHiUlR+Vlx/NFkiTpgjm92F3ZABAwAAiHQxaLJTc3d/PmzQCQmppqs9nq6+v5ZYGg2ifTtmErOnZaPnXGt2iu7Y13WwAYQqi8vGzmzJmXVNvgucuZM2ciysVdGA+IVFWtr69/6KGHfv/733u9XoyBUigpC/1qfvTfPghv24t6pwoJ8ToWgE8gFApNmTIlPz//8OHDXq/3tdde69ibDGOGEGCMCGGXucUQRoQQjAS/P/Dll19+/vnny5Yta25u/s1vfnPixInq6mpBwITQgJ/FRrGsNHntP/2Dc+Voh97sJfwJbW2+Tz755LIrFp1h5VECR7C+vp4vD/97RY0uYz2vr/jux95nf2UNhzRdxxwFhFAgENiyZUuE+Y4U6ShhDEDAiJCLMplit3kzA4EBRQg98sgjsiwvXbpUkqQdO3b88pe/jDy0rZ2pmjp0oLTtP1rn3xntrmX+AIlUoC6v+NNFrZE/lisaY4AQ+IJqZZ2WkYF7xeP0NHSqGMKhsz1H0DEH/kAebXXURs6G45dvpBnw0wIMAHw+35w5cx566CGj0eh2uzvyYAYArT69pgYyUsjY4VaXkx04RCijGCN+77/ndPVG5xI2QggAl1Wh0UPRuBEWxUD3H9cYaALCpNMOPa92xMkgBujyS8+IUcQ6+k/5Oni9Xrfb3bkHAWMghOw8rBnMQl62rKmstoFFR1kZgytsf+th5YdSNiQvtslDRJHkZmmNTUJ5BYuJNnPyrIsbCeHnPy4fIEYoVRSBs0I8V+AwRRYQIUQpZPZ2lFZCQyNOTQw3eZHPTwbncoCueVmVizdqiFBbG/a24vTebPMONSnBkJFqYufQCOf5H1HAAEjX6eUkq1w2XddFQUCdCPcIVdT5spRewvA8wz++CKWkiPVNmj+k9csSIgn3tR4YocREpFPwt9PyasOmHb4JY5RGj7/r9wsixgLqtquiG/Opa0wUuqwxMAYAlVWBiQVycWl450HsD8oCgvQkJOB/V4ev3f5CCMxmHOMgdhvy+U3vvO+b/DNzVBRx12lwNkS5UOkaQMCCgEROlneh6bhr3jcU1kWRJ7QXticcgUq35g/q9862/uMzX1mN4ooVLGZdkVAP686XDxAgxkCWsFEBu138aEN7Woo851bjrj2hUJhg3AU+IAiCiLGmkcvsD+KP9gfCoiDIsnAxbWUAGIOq6d/uUUcPhSnjzBs21UU5kCgxWZGuqQLx/gW7zRgfZ5JEqoZJS4vv9ptEj5fs3BfkBaiuGkNlJIoQDGldm4JutlggqCFg/BwOXMQfMgYI4c07fMVlwk0T6MhBRo9HU0TITDNOHBN/rXwZAgZIkYQ7prliHUAYqJow9zZHjJN9/CWtqg100U/Cf48FLIoC5zrY5dkghCCs6rpGTCaJc3RdvK+lLfTWe+1tfmHWraLDbgEAYOEJozq8CbrqhhmA0RFDbAmxxNuq+QKoT5oybhT65wZYv70VY9S18ooiliQRGPP71StpwUMA0O4PW8wGURS69LUUY6htJK+9HXLYxeEDwdsKlGF/wD92lKlrK3gF3l0Yk29obgkCSEaBjB/FNmwi+w7rI4bEnF+JO2fIimxQsKYTndCuFbz7JKClNWgyCgaj2IWcGCNKoU+6OcFl+u2yFlHEvRKJ1YRrarWh/RVRFK/4yMR5tXkGNqvUN02sqyNZ6eBwSu9+rP5zY/vcmVHumtZuG2gURVRksd0fPod46RFAEd6X7ylva4gRarUauzBDfMWOHG/OHyYP7W967k+evYdw/nBbfSPEu2hOpukqtikiBJQiBpCdYTAb9WBITIy3L/vfbaeKQr//TXThSX+FO4gx7tIAIYNBFjF4vIFuSfsLN3FGSs8IIUqZzapYrIbGxvYunoUxEAoNDeTXC+wJscIn6/21jbTVh0YNFnSduBulYJDSKzZGGCHGUEy0MignNqcP6Z0i/v3jwKni0KB+8iP3GNva0Ov/p5nQbs7BypLsirUgYO66Nq44TqdTUZQLdr9eFKCOYguPp2lKclSTJ6Cp+sUkZAwwRvXNOtGk6ZPQ4Dy5upZ+d8CX3MuQmogDQWXiaNvB4+3oCk5M8g4gWcS/XpDY3BQcOkgqLIK6Om3hXOPYkbS5RfzTX9sbPKFu+yGtNkNirLW+0dfuVzFCDIB3XfNEqqcAdVIiCIVIQpwFYdTiDXRhS3gf8qkzYQamvH5s5GBISTSXltHhg6Vd+wLXjZQSXPKRwuDlNQYjBAhjStGiuTExUWT/8dD4UWJDHfnFNCU+Tj1Toaz8e/uZ8vbu/BcCQK44m8UolpQ3n9PTfkHRLtonzYs/Hf0PjBKakuKscbex7hQYEJz43l9ZIzms4pA8nJXBFEmjIO47GL57prG+USitDAnCpaVpCAHGmBK4eaLjjmnSR5+powbL/dJZgkuormOfbiCfbwqXVfq70J3IUAxKWoqjudnvbQlEmswirWKXBhBve+Dza/drWRkxoTDx+UII4S7k40SIYjSdPEO27g4Hg2IojLIypaMnMUZ0+mS5okaqcof4hR3Cd5yPQWebGxH+N6GCEGIMMYauL4haMMe4abt+rIj2z5Y379DXfRH64pv2Xolmh91YWePvGnX+NJfLHh9rPl3cQMjZlY6w7JcG0A+7GBBjTAuTrCxXeaUHdbfaAGCQYM4v4jDW9xwMnDilny4irT60Y18wOUG+oUAmmlxWrRFKOKfHSRnWKX1hrBNTg5DdItw6yTHzFuHESfr1DtUZBbX1aksr6ZspzZ1lt5qVjz+v0wnrVn8EUejXJ76u1tvsCXRuBu5KnC4ayXkFkVfvOEbXj+/zfWlzVWVz101gCAFjKN6pPHxvbJ9MGg6qTV7wB2kgKFCiZ2eA3S6dLJM+/iK8/4g3NUnuky6KCJdW6zV1KqI0Ls7QJ11WRCitVIvK1dRelltvNA/MJpiFvG3IaMAGI5UEJMnYHxS++Vb72z+8OqG8F6ULWRhjScnRmanOHbtLOFfLaxuKolxOC15k8NNrfHs7o0z5I9M3fH2SsW6YDIwx59fzB5kmFhhTk5nZCAhDMIjOVLDjp8N1DSzOqQzIRv2zxWBQPHAsbDYpvRIEQLqvTdh7KDBsoJSXjctrtKIz7NhJtbZJ7d1LHDRQdNqxrgkNHq2mlh45qVa5eZ9gt3YfiRIee13m6VN17vrWiLXqfMDrcgDiR775EWu+CMMGp2qEHj1W1W0nIe44LWAyKokxkiACMPC26TphfTOME64TszPAZGA7D+I1n7QNyDEXDLN9sdnT5FFvnRxb16Ct39JcMNI6exqWJNoewoVF6KutoSp3GAEjFCXGK6GwUFnTgnH3tCmHo3//JLNB2HugIjJzSbpwufnSNAgAeB0dOnq2J03M/m5/eWvLuV4jUmk4h9BSZAkBBDixABDrlOJiRUrCwSAAEsurCCDav6+hrlFvbNYAQBRQbpapqjbsadUT4xRF1hGiRoNAmNzSSvwBHQFzxRo9LcTbEupcF+XEHj3Pz3J7nz887dCRqrCqR3pOjEZj9w60JwBRSiNn0BljUQ7joAG9tu4oQReJ0y+oXHypu67zYnTWQnde+R4naJhDwxtMz5lMdh+Xxxuob2yPzE1ReJLIriSb7zD+gsAdIcfI2xKsqmoZkOPiDUSRmECW5VWrVjmdTt6/cU58RunZvcAdeeRfBBqEgHZsFv7jORdzfUQdihkxHZGy15gxY2688cbO3YYcjpQkB6WsMzq8tN+TeLVHB+oiy9JRycAerz8+zmowSC0tQYzPlsD/8pe/uN3uDRs2pKWleb1eftcFJ8E6/etMYMKFfjznyvMnxon3CRMmLFu2DCE0aNCgffv2Mcb456xineZYp+Xk9/URdPhse6qYPQ9nFUXpaMagCKGjJ+p7JdiSetkpZQCsb9+++fn5L774YlZW1ubNm5csWcIbrq5daQwhJEkSIYS/MSYmZtWqVZqmTZs2TVEMnJCNiTYl93KcOFXXeddHBOmRZvRQg6Dj/GNkeyOEaut9I4f1VsN6a1uwrq7u1KlT+fn5ixcvrqmp+e6771wuV3p6emlpKe8tvKqMB4qkl1OmTJkyZYqiKJTSVatWZWdnv/HGG263mzEWE21OTY46WlhLO3Uhy7Lcw811yQBBx4mwSHhNCa1xt4zOz9I0raU1WFZWVl1dfcMNN3z00Ueqqi5atEiW5aysrAMHDkR0+8p4MhxpvqOU9uvX78knn0xISDCbzYsWLVqyZMnhw4e//PLLpqYmAEiIsyYm2I4V1kVSih769cvxYhePjIAxUAzyxAnZlWUNJ07XATBFUdLT0++8886Wlpb29vbNmzcPHTp0+vTps2fP7vwQbsX5Huw6Auajs2PKzs6eOXPmq6++un///q1bt95xxx3Tpk3bu3evLMtqOAwI0pIdRqN0/GTdD8oYl47OJWvQhfQI67peXtGcnZMYF21sag6EVa2pqamwsPC2224bOHCg0Wj81a9+5fV6jx8//vjjj2/ZsiXS9BqJGzpDFjnI3Jnh5FcOHz584cKF6enpFovl8ccfNxqNX375pdlsXrJkidvt9nq9mqZRxhRZNBjE4o5vWHWw9N2kFFcToB9ixBACQmh1ldcV70hNdjQ0+hhAe3v7F1988cUXX0yYMCEYDPJAwWAwfPvtt7yf9O67705JSfn++++dTic/7B/pleoMWWxsLD/tcubMmcmTJ993333Lly9njI0bNy4uLu7EiRMff/xxYWFha2trBFZdp61toauCzuUDFMGoo0MHUcrq6n2KURZFoa0tyDeHqqrbtm37+uuvVVWdPXv24cOHjx8/rmna8uXLk5KSGhoabrrppnvvvbegoMDj8SxdurS+vv76668vKCiYPn06AMyZM8dgMMycOXP06NGbN2/evn27KIojR47cuXOnoij3339/YWGh1+vtzKCfT33JsnwZO+sqAMQxijQm8WTa0+y3O0zOGGvAHybkbHu8qqqnT58+cOBAXl6e2+32eDz33nvvli1b1q5d+9prr82YMeNnP/tZTk5OQUFBZmamLMsul4sQUlJSMn369B07duTl5ZWUlNxxxx2iKH711VeEkH379m3fvp0vzznJzTn2S1EUSZKuxIFeEUDQ8TUb/lVWPqe21gAwFhdv87WHKaGRJrPGxsZdu3bx83K7du2aNWuWJElFRUULFy4URXHfvn0ejycnJ6e5uXn9+vWzZs1qa2srKSm56667Pvvssw0bNiCE9u7dW15ezo82dp8qY9zFMblr6MUuNngra8S1de4humAYFRmZmZnV1dWSJDmdTp5AGgyG2NjYrVu3qqpqs9na2tq6yIcvXHeXpCtc+KsPUMeXAtUOCFDXtCzfm11Ly9Uk0pzfky+kCIIgSdJV/GDI1f8SJ/8MSreL3FmzOor3CP595B9HdK2HomKMObv8X/pLnJE+eUJID2HqdLSxs2D0kuwgz86vxVdvr/7nkiN8QuTg73knQnkDLkWAZAO2mI2SLACjuk47SHoQBYwQhMPU7w+pYd7mjc5P+3l4Fcn1/ht87PaCtSOeVV4oHUMYgSBiScKiiDs+nwKMMUYZ0amm044z7ewcLYscz7um30q+5gBdvGjJT0KzjvLOuTJGvlbUQYyhi6nqtR4/0ifbLyQM68Rboy7vhR+pXfYKCbP/meMngH4C6CeAfgLoP3P8P0qez8GtTeNuAAAAAElFTkSuQmCC" alt="On Point Lawyers"></div>
+    <span class="brand-name">On Point Lawyers</span>
+  </div>
+  <div class="nav-right">
+    <button class="nav-book-btn" onclick="document.getElementById('booking').scrollIntoView()">Book a Consultation</button>
+  </div>
+</div>
+
+<main class="wrap">
+
+  <section class="hero">
+    <div class="hero-tags">
+      <p class="eyebrow" onclick="openWhatsAppDirect()">Legal Consultant</p>
+      <div class="status-pill"><span class="status-dot"></span> AVAILABLE TODAY</div>
+    </div>
+    <h1>Expert guidance in both Sharia and Common Law.</h1>
+    <p>Providing practical solutions in family matters, inheritance, business, tenancy, contract drafting, and dispute resolution &amp; so much more.</p>
+
+    <div class="dual-divider"><span class="a"></span><span class="b"></span></div>
+    <div class="dual-caption"><span class="l">Sharia Law</span><span class="r">Common law</span></div>
+  </section>
+
+  <div class="card">
+    <div class="profile-row">
+      <div class="avatar"><img src="data:image/jpeg;base64,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" alt="S.U Usman Esq."></div>
+      <div>
+        <p class="profile-name">S.U Usman Esq.</p>
+        <p class="profile-role">On Point Lawyers · Sharia &amp; Common law Expert</p>
+        <button class="book-tab" onclick="openWhatsAppDirect()">Book a Consultation</button>
+      </div>
+    </div>
+    <div class="tag-row">
+      <span class="tag">Litigation</span>
+      <span class="tag">Business law</span>
+      <span class="tag">Corporate law</span>
+      <span class="tag">Family &amp; marriage</span>
+      <span class="tag">Inheritance</span>
+      <span class="tag">Sharia law</span>
+      <span class="tag">Property &amp; land</span>
+      <span class="tag">Contract drafting</span>
+      <span class="tag">Criminal defence</span>
+      <span class="tag">Debt recovery</span>
+      <span class="tag">Dispute resolution</span>
+    </div>
+  </div>
+
+  <p class="section-label">Client satisfaction</p>
+  <p class="tpl-hint">★★★★★ 4.9 average, based on client feedback</p>
+
+  <div class="testimonial-marquee">
+    <div class="testimonial-track">
+      <div class="t-card t-en"><span class="t-lang">EN</span>"Fast response and clear guidance on my case."</div>
+      <div class="t-card t-ha"><span class="t-lang">HA</span>"Sauri da bayani mai kyau kan al'amarina."</div>
+      <div class="t-card t-yo"><span class="t-lang">YO</span>"Idahun kiakia, alaye to daju lori oro mi."</div>
+      <div class="t-card t-en"><span class="t-lang">EN</span>"Professional, patient, and easy to reach."</div>
+      <div class="t-card t-ha"><span class="t-lang">HA</span>"Ya taimaka min sosai a kan lokaci."</div>
+      <div class="t-card t-yo"><span class="t-lang">YO</span>"O ran mi lowo daadaa, mo dupe gan."</div>
+      <div class="t-card t-en"><span class="t-lang">EN</span>"Fast response and clear guidance on my case."</div>
+      <div class="t-card t-ha"><span class="t-lang">HA</span>"Sauri da bayani mai kyau kan al'amarina."</div>
+      <div class="t-card t-yo"><span class="t-lang">YO</span>"Idahun kiakia, alaye to daju lori oro mi."</div>
+      <div class="t-card t-en"><span class="t-lang">EN</span>"Professional, patient, and easy to reach."</div>
+      <div class="t-card t-ha"><span class="t-lang">HA</span>"Ya taimaka min sosai a kan lokaci."</div>
+      <div class="t-card t-yo"><span class="t-lang">YO</span>"O ran mi lowo daadaa, mo dupe gan."</div>
+    </div>
+  </div>
+
+  <p class="section-label" id="guides">Legal guides, free</p>
+  <p class="tpl-hint">Tap a category to read the full guides.</p>
+
+  <div class="cat-entry-list">
+    <button class="cat-entry" data-cat="family" onclick="openGuidesPage('family')">
+      <span class="cat-dot dot-family"></span>
+      <span>Family &amp; Marriage</span>
+      <span class="chev">›</span>
+    </button>
+    <button class="cat-entry" data-cat="property" onclick="openGuidesPage('property')">
+      <span class="cat-dot dot-property"></span>
+      <span>Property &amp; Land</span>
+      <span class="chev">›</span>
+    </button>
+    <button class="cat-entry" data-cat="business" onclick="openGuidesPage('business')">
+      <span class="cat-dot dot-business"></span>
+      <span>Business &amp; Contracts</span>
+      <span class="chev">›</span>
+    </button>
+    <button class="cat-entry" data-cat="criminal" onclick="openGuidesPage('criminal')">
+      <span class="cat-dot dot-criminal"></span>
+      <span>Criminal Law</span>
+      <span class="chev">›</span>
+    </button>
+    <button class="cat-entry" data-cat="litigation" onclick="openGuidesPage('litigation')">
+      <span class="cat-dot dot-litigation"></span>
+      <span>Disputes &amp; Litigation</span>
+      <span class="chev">›</span>
+    </button>
+    <button class="cat-entry" data-cat="digital" onclick="openGuidesPage('digital')">
+      <span class="cat-dot dot-digital"></span>
+      <span>Digital Assets</span>
+      <span class="chev">›</span>
+    </button>
+  </div>
+
+  <div id="guidesOverlay" class="page-overlay">
+  <div class="page-panel">
+    <div class="page-header">
+      <button class="page-back" onclick="closeGuidesPage()">‹ Back</button>
+      <p class="page-title" id="guidesPageTitle">Family &amp; Marriage</p>
+    </div>
+    <div class="page-body">
+
+  <div class="guides-glow-wrap glow-family" id="guidesGlow">
+  <div class="tab-bar">
+    <button class="tab-btn active" data-cat="family" onclick="setTab(this)">Family</button>
+    <button class="tab-btn" data-cat="property" onclick="setTab(this)">Property</button>
+    <button class="tab-btn" data-cat="business" onclick="setTab(this)">Business</button>
+    <button class="tab-btn" data-cat="criminal" onclick="setTab(this)">Criminal</button>
+    <button class="tab-btn" data-cat="litigation" onclick="setTab(this)">Disputes</button>
+    <button class="tab-btn" data-cat="digital" onclick="setTab(this)">Digital</button>
+  </div>
+
+  <div class="guide-list">
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">A widow's rights after her husband's death</div><div class="s">Protecting yourself from being pushed out</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Widows in Nigeria are sometimes pressured by in-laws to leave the matrimonial home or sign away property soon after a husband's death, this is not lawful, and a widow retains rights to her share of the estate under whichever system applied to the marriage, sharia or common law, regardless of family pressure.</p>
+      <p>Acting quickly to secure documents, property records, and evidence of the marriage protects your position significantly, delays make it easier for others to move assets or dispute your claim.</p>
+      <p class="guide-cta">Facing pressure after a bereavement? Book a consultation to protect your position.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Paternity and legitimacy disputes</div><div class="s">When fatherhood is contested</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Paternity disputes commonly arise around child maintenance, inheritance, or custody, and Nigerian courts can order DNA testing to resolve the question where it's genuinely contested. Under sharia, legitimacy is generally tied to a valid marriage at the time of birth, which affects inheritance rights differently than under common law.</p>
+      <p>A child's rights to maintenance are not always dependent on the parents' marital status, this is worth understanding clearly rather than assuming disputed paternity ends financial responsibility.</p>
+      <p class="guide-cta">Involved in a paternity or legitimacy dispute? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Marriage registration for returning Nigerians</div><div class="s">Diaspora marriages and local recognition</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>A marriage conducted abroad is generally recognised in Nigeria if it was valid where it took place, but for local matters, property, inheritance, immigration for a spouse, it's often necessary to register or formally document it locally as well, particularly if the original marriage certificate isn't in a form Nigerian institutions readily accept.</p>
+      <p>This becomes especially relevant when relocating back to Nigeria permanently, worth sorting out proactively rather than when a dispute or urgent need arises.</p>
+      <p class="guide-cta">Relocating with a marriage from abroad? Book a consultation to get it properly recognised.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Breach of promise to marry</div><div class="s">When an engagement falls through</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Nigerian courts have recognised claims for breach of promise to marry, typically involving recovery of gifts, dowry, or expenses incurred in reliance on the promised marriage, though these cases require clear evidence of an actual promise and genuine reliance, not just a relationship that didn't work out.</p>
+      <p>Under Islamic practice, the return of dowry after a broken engagement is often addressed more directly through custom before it ever needs to reach a court.</p>
+      <p class="guide-cta">Dealing with a broken engagement dispute? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Cohabitation without marriage</div><div class="s">What rights unmarried partners actually have</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Unlike some countries, Nigeria does not recognise "common-law marriage" simply from living together, cohabiting partners generally don't have automatic rights to each other's property or inheritance the way a married couple would, regardless of how long the relationship lasted.</p>
+      <p>Property acquired jointly can still be claimed based on actual financial contribution, but this needs to be proven, which is exactly why documentation matters even in an unmarried relationship involving shared assets.</p>
+      <p class="guide-cta">Unclear on your rights in a long-term relationship? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Boundary disputes with neighbours</div><div class="s">Resolving encroachment before it escalates</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Boundary disputes often start small, a fence built a few feet over the line, and escalate quickly once construction begins. A licensed surveyor's report showing the correct boundary is the strongest evidence in these cases, and getting one early, before confrontation, is far more effective than arguing based on memory or old agreements.</p>
+      <p>Where a neighbour has built on your land, a court can order removal of the encroaching structure, but acting before construction is complete is always the stronger position.</p>
+      <p class="guide-cta">Facing a boundary dispute? Book a consultation before it escalates.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Mortgages and property financing</div><div class="s">What to check before you commit</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Before taking a mortgage, confirm the property's title is genuinely clean, since lenders will require it, and a defective title can delay or kill the financing entirely after you've already paid fees. Understand the interest structure, repayment terms, and what happens on default, foreclosure processes vary and are worth understanding upfront.</p>
+      <p>Government mortgage schemes exist alongside commercial bank options, each with different eligibility and terms, worth comparing rather than assuming the first offer is the best one.</p>
+      <p class="guide-cta">Considering a mortgage or property loan? Book a consultation to review the terms.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Squatters and unauthorised occupation</div><div class="s">Reclaiming property that's been taken over</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Someone occupying your property without permission, whether a former tenant who refuses to leave or a stranger who moved in on vacant land, cannot lawfully be removed by force, this must go through a proper court process, even though it's genuinely your property. Self-help eviction can expose you to criminal liability.</p>
+      <p>Long, uncontested occupation can in rare cases create a claim under adverse possession principles, which is exactly why addressing unauthorised occupation early, not years later, matters.</p>
+      <p class="guide-cta">Dealing with unauthorised occupants? Book a consultation to reclaim your property properly.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Managing property as a landlord</div><div class="s">Staying compliant while protecting your investment</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Beyond a solid tenancy agreement, landlords should keep clear records of rent payments, maintenance requests, and any notices issued, this documentation is what protects you if a dispute ever reaches court. State tenancy laws also place real limits on rent increases and eviction procedures, worth knowing before you act.</p>
+      <p>Renting out property without proper documentation is one of the most common sources of landlord disputes, a small amount of upfront structure prevents most of them.</p>
+      <p class="guide-cta">Managing rental property? Book a consultation to get your documentation right.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Building approval and government layout rules</div><div class="s">Avoiding a demolition order before you build</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Building without proper approval from the relevant state physical planning authority is one of the most common causes of demolition orders in Nigeria, even on land you genuinely own. Approval requirements vary by state and by whether the land falls within an approved layout, worth confirming before construction starts, not after.</p>
+      <p>A stop-work or demolition notice can often be challenged if procedure wasn't followed correctly, but prevention through proper approval is always the stronger, cheaper path.</p>
+      <p class="guide-cta">Planning to build? Book a consultation to confirm your approvals are in order.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Franchise agreements explained</div><div class="s">What you're actually signing up for</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>A franchise agreement should clearly define territory rights, ongoing fees, brand and quality standards you must maintain, and what happens if either side wants to exit the arrangement. Franchise disputes commonly arise from unclear territory exclusivity or vague performance expectations, both worth pinning down precisely before signing.</p>
+      <p>Whether you're the franchisor or franchisee, having the agreement reviewed protects you either way, franchise terms are often written to heavily favour one side by default.</p>
+      <p class="guide-cta">Considering a franchise arrangement? Book a consultation before signing.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Shareholder disputes and winding up</div><div class="s">When a business relationship breaks down</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>When shareholders can't agree, on direction, exit terms, or valuation, a minority shareholder isn't without recourse, Nigerian company law provides remedies for oppression and mismanagement, including court-ordered buyouts in serious cases. Winding up a company voluntarily is a formal CAC process, not something that happens by simply stopping operations.</p>
+      <p>Reviewing what your original shareholder or partnership agreement says is always the first step, many disputes are actually resolved by terms already agreed but forgotten.</p>
+      <p class="guide-cta">In a shareholder dispute? Book a consultation to review your options.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Tax obligations for small businesses</div><div class="s">What you're actually required to pay</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Registered businesses in Nigeria generally owe company income tax, VAT on applicable goods and services, and state-level taxes such as business premises levy, obligations vary by business size and structure, and many small business owners underpay simply from not knowing what applies to them, not from intentional evasion.</p>
+      <p>Keeping basic financial records from day one makes tax compliance dramatically easier, and protects you if FIRS or a state revenue authority ever queries your filings.</p>
+      <p class="guide-cta">Unsure what tax obligations apply to your business? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">E-commerce and online business rules</div><div class="s">Legal basics for selling online</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Selling online doesn't exempt you from CAC registration or consumer protection obligations, clear return policies, accurate product descriptions, and secure handling of customer payment data are all expected, and increasingly enforced under Nigeria's data protection regulations (NDPR).</p>
+      <p>Terms of service and a privacy policy aren't just formalities, they genuinely protect you from disputes over refunds, delivery delays, and data misuse claims.</p>
+      <p class="guide-cta">Running or starting an online business? Book a consultation to get the basics right.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Remedies for breach of contract</div><div class="s">What you can actually claim</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>When the other side breaches a contract, common remedies include damages (financial compensation for your loss), specific performance (a court order forcing them to fulfil the contract), or rescission (cancelling the contract entirely), which remedy fits depends heavily on what the contract says and what you actually lost.</p>
+      <p>Courts generally compensate for actual proven loss, not simply what you hoped to gain, keeping records of your losses strengthens any claim significantly.</p>
+      <p class="guide-cta">Dealing with a breached contract? Book a consultation to assess your claim.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Theft and stealing charges</div><div class="s">What separates the two, and what to expect</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Nigerian criminal law distinguishes stealing (taking property with intent to permanently deprive the owner) from related offences like obtaining by false pretences (fraud), the specific charge affects both the potential penalty and the defence strategy, so the exact wording of a charge matters more than people often assume.</p>
+      <p>Being accused doesn't mean conviction is automatic, the prosecution must prove intent, not just possession or access, which is often the strongest point in a proper defence.</p>
+      <p class="guide-cta">Facing a theft or stealing charge? Book a consultation urgently.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Defamation: civil claim or criminal charge</div><div class="s">Protecting your reputation the right way</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Defamation in Nigeria can be pursued as a civil claim for damages, or in some cases as a criminal charge for criminal libel, though criminal defamation prosecutions are less common and generally reserved for more serious cases. A civil claim requires showing the statement was false, published to a third party, and caused harm to your reputation.</p>
+      <p>Screenshots and evidence of publication, who saw it, when, and the actual harm caused, are essential to building a strong defamation case.</p>
+      <p class="guide-cta">Dealing with defamatory statements against you? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Drug offences and penalties</div><div class="s">What the law actually covers</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Drug offences in Nigeria are handled primarily under the NDLEA Act, and penalties vary significantly depending on the substance, quantity, and whether the charge is possession versus trafficking, a distinction that dramatically changes both the process and potential sentence. Being present where drugs are found doesn't automatically establish possession in law.</p>
+      <p>Early legal representation matters enormously in drug cases, procedural errors in how evidence was obtained are a common and legitimate line of defence.</p>
+      <p class="guide-cta">Facing a drug-related charge? Book a consultation immediately.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Traffic offences and your rights</div><div class="s">What officers can and can't demand</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>For most traffic offences, an officer should issue a proper ticket or notice rather than demanding cash on the spot, on-the-spot cash payment to an officer is not the lawful process for the vast majority of offences and is a well-documented source of abuse. You're entitled to know exactly what you're being charged with.</p>
+      <p>Vehicle impoundment must follow proper procedure too, an officer generally cannot simply drive off with your vehicle without documentation of why.</p>
+      <p class="guide-cta">Had a problematic experience with traffic enforcement? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Testifying as a witness</div><div class="s">What to expect, and your protections</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Witnesses in Nigerian criminal cases can request certain protections if they fear retaliation, and intimidating or threatening a witness is itself a criminal offence. Understanding the process beforehand, what you'll be asked, how cross-examination works, reduces the anxiety significantly for first-time witnesses.</p>
+      <p>You're not required to answer questions that could incriminate you personally, even as a witness rather than the accused, this is a real and available protection.</p>
+      <p class="guide-cta">Asked to testify and unsure of your rights? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Group and class action claims</div><div class="s">When many people share the same complaint</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Where multiple people have suffered from the same issue, a faulty product, a shared landlord dispute, a company's misconduct, a representative or group action can be more efficient than each person filing separately, sharing costs and strengthening the case through combined evidence.</p>
+      <p>Nigerian procedural rules allow for representative actions under certain conditions, worth exploring early if you know others affected by the same issue.</p>
+      <p class="guide-cta">Aware of others facing the same issue? Book a consultation to explore a joint claim.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Enforcing a judgment you've already won</div><div class="s">When winning in court isn't the end</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Winning a case doesn't automatically mean payment, if the other side doesn't comply voluntarily, enforcement mechanisms exist, garnishing bank accounts, attaching property, or in some cases committal proceedings, but these require a separate, deliberate legal process to activate.</p>
+      <p>Acting promptly after judgment matters, assets can be moved or hidden the longer enforcement is delayed, so this isn't a step to leave for later.</p>
+      <p class="guide-cta">Won a case but not getting paid? Book a consultation to start enforcement.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Injunctions: stopping something before it happens</div><div class="s">Urgent court orders explained</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>An injunction is a court order stopping someone from doing something, selling disputed property, demolishing a structure, continuing a harmful action, before the full case is resolved. Courts grant these where waiting for a full trial would cause harm that can't later be undone, speed matters enormously in these applications.</p>
+      <p>Interim injunctions can sometimes be obtained within days in genuinely urgent situations, but require clear evidence of the urgency and harm involved.</p>
+      <p class="guide-cta">Need to stop something urgently? Contact us immediately on WhatsApp.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Limitation periods: how long you have to sue</div><div class="s">Don't let a valid claim expire</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Nigerian law sets strict time limits for bringing most types of claims, contract disputes, personal injury, property claims, and once that limitation period expires, you generally lose the right to sue, regardless of how valid the underlying claim is. These periods vary by claim type and state, six years is common but not universal.</p>
+      <p>If you've been sitting on a dispute for a while, checking whether you're still within time is a critical first step before anything else.</p>
+      <p class="guide-cta">Not sure if your claim is still valid? Book a consultation to check before it's too late.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Choosing the right legal representation</div><div class="s">What actually matters when picking a lawyer</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Beyond general reputation, the right lawyer for your matter has genuine experience in that specific area, family, property, criminal, business, and is upfront about costs, likely timelines, and realistic outcomes rather than overpromising a guaranteed win, no honest lawyer guarantees a specific result.</p>
+      <p>A good first consultation should leave you with a clear sense of your options and next steps, not more confusion than you started with.</p>
+      <p class="guide-cta">Ready to talk through your situation properly? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Divorce settlement and property division</div><div class="s">Who gets what, in both systems</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Under common law, courts divide matrimonial property based on contribution and fairness, not automatically 50/50, property acquired before the marriage or through inheritance is often treated differently from property built together. Under sharia, a wife generally keeps her own property and dowry regardless of divorce, since spousal finances aren't automatically merged the way common law sometimes assumes.</p>
+      <p>Documenting who paid for what during the marriage matters significantly if a dispute over property division arises later.</p>
+      <p class="guide-cta">Going through a divorce settlement? Book a consultation to protect your share.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Step-parent and blended family rights</div><div class="s">Where step-children legally stand</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>A step-parent has no automatic legal or inheritance rights over a step-child unless formal adoption has taken place, this surprises many blended families who assume informal care creates the same standing as biological or adoptive parenthood. A will can address this directly where formal adoption isn't the goal.</p>
+      <p>Custody and maintenance obligations remain with biological parents unless a court order says otherwise, worth clarifying early in a blended family situation rather than assuming.</p>
+      <p class="guide-cta">Navigating a blended family's legal standing? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Forced marriage: your legal protections</div><div class="s">You have options, even under pressure</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Consent is a genuine requirement for a valid marriage under both sharia and common law, a marriage entered under duress can be challenged and potentially annulled. Nigerian law also recognises forced marriage as a protectable rights issue, particularly for minors.</p>
+      <p>If you're facing pressure into a marriage you don't want, there are legal routes to resist it, this is not something you have to navigate through family pressure alone.</p>
+      <p class="guide-cta">Facing pressure into an unwanted marriage? Reach out on WhatsApp for confidential guidance.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Marriage annulment vs divorce</div><div class="s">A different process, with different effects</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>An annulment declares a marriage was never legally valid in the first place, grounds include lack of consent, existing prior marriage, or fraud, while divorce ends a marriage that was validly formed. The distinction matters for inheritance, remarriage timing, and how property is treated afterward.</p>
+      <p>Annulment is harder to obtain than divorce since it requires proving the marriage was defective from the start, not simply that it later broke down.</p>
+      <p class="guide-cta">Unsure whether annulment or divorce fits your situation? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Grandparents' visitation rights</div><div class="s">Staying connected after a family split</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Grandparents don't have automatic visitation rights the way parents do, but courts can grant visitation where it's shown to be in the child's best interest, particularly where a grandparent played a significant caregiving role before a family breakdown.</p>
+      <p>This is often resolved informally within families, but where access is being blocked entirely, a formal application is worth exploring rather than accepting the situation as final.</p>
+      <p class="guide-cta">Being denied access to grandchildren? Book a consultation to explore your options.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Compulsory acquisition and compensation</div><div class="s">When government takes your land</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Government can compulsorily acquire private land for public purposes under the Land Use Act, but this requires proper notice and, in most cases, fair compensation to the affected owner. Compensation amounts are sometimes disputed, and owners have the right to challenge an unfairly low valuation before an appropriate tribunal or court.</p>
+      <p>Acting within the notice period matters significantly, missing deadlines can weaken your ability to contest either the acquisition itself or the compensation offered.</p>
+      <p class="guide-cta">Received an acquisition notice? Book a consultation before the deadline passes.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Joint tenancy vs tenancy in common</div><div class="s">Two very different ways to co-own property</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Under joint tenancy, co-owners have equal, undivided shares, and if one dies, their share automatically passes to the surviving owner(s), not through their will. Under tenancy in common, each owner holds a distinct, separately inheritable share, which can be unequal and passes according to their will or inheritance rules, not automatically to co-owners.</p>
+      <p>Which structure applies significantly affects what happens to the property when an owner dies or wants to sell their share, worth confirming clearly at the point of purchase.</p>
+      <p class="guide-cta">Co-owning property and unsure which structure applies? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Lease vs tenancy: what's the difference</div><div class="s">Terms that affect your rights significantly</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>A lease is generally a longer-term arrangement (often years), offering more formal rights and sometimes registrable interests, while a tenancy is typically shorter-term (monthly or yearly) with more flexible, less formal terms. Notice periods, renewal rights, and what happens at the end of the term differ significantly between the two.</p>
+      <p>Calling an arrangement a "lease" in conversation doesn't make it one legally, what matters is the actual duration and terms agreed, worth checking your document carefully.</p>
+      <p class="guide-cta">Unsure whether your agreement is a lease or tenancy? Book a consultation to review it.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Property inspection before purchase</div><div class="s">What a lawyer checks that you might miss</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Beyond the physical inspection most buyers do, a proper legal due diligence includes a title search at the lands registry, confirming there's no pending litigation on the property, checking for existing mortgages or liens, and verifying the seller genuinely has authority to sell, especially important with family or estate-owned property.</p>
+      <p>Skipping this step to save time or a small fee is exactly how buyers end up in expensive disputes months or years later.</p>
+      <p class="guide-cta">About to purchase property? Book a consultation for due diligence first.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Disputes with estate agents</div><div class="s">When an agent doesn't deliver as promised</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Estate agents in Nigeria are not uniformly regulated the way lawyers are, which means disputes over commission, misrepresented properties, or agents disappearing with deposits are unfortunately common. Where an agent has acted fraudulently, both civil recovery and, in serious cases, criminal fraud charges may be available routes.</p>
+      <p>Getting agreements with an agent in writing, including commission terms, protects you significantly if a dispute arises later.</p>
+      <p class="guide-cta">Dealing with a problematic estate agent? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Non-compete clauses: are they enforceable</div><div class="s">What courts actually allow</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Nigerian courts are generally cautious about enforcing broad non-compete clauses, since they can restrict a person's right to work, a clause is more likely to be upheld if it's reasonable in duration, geographic scope, and genuinely protects a legitimate business interest, not simply designed to block competition entirely.</p>
+      <p>Whether you're an employer trying to protect trade secrets or an employee facing a restrictive clause, the specific wording matters enormously in how enforceable it actually is.</p>
+      <p class="guide-cta">Dealing with a non-compete clause? Book a consultation to understand your position.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Mergers and acquisitions basics</div><div class="s">What to know before combining businesses</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Whether buying, selling, or merging with another business, proper due diligence, reviewing the target's debts, contracts, and legal disputes, is essential before any deal closes, undisclosed liabilities are one of the most common sources of post-merger disputes. Regulatory approval may also be required depending on the industry and size of the businesses involved.</p>
+      <p>A well-structured agreement addresses valuation, what's actually included in the sale, and warranties from each side about the accuracy of what's been disclosed.</p>
+      <p class="guide-cta">Considering a merger or acquisition? Book a consultation before signing anything.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Vendor and supplier agreements</div><div class="s">Protecting your supply chain</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>A solid vendor agreement covers delivery timelines, quality standards, payment terms, and what happens if the vendor fails to deliver, late or defective supply is one of the most common sources of business disputes, and vague agreements make it much harder to hold a vendor accountable.</p>
+      <p>Penalty clauses for late delivery, and clear termination rights if standards aren't met, protect your business significantly more than a handshake arrangement ever will.</p>
+      <p class="guide-cta">Setting up or reviewing a vendor relationship? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Intellectual property basics for startups</div><div class="s">Beyond just trademarks</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Beyond trademarks, startups should think about copyright (automatically protecting original written, visual, or software work), patents (for genuinely novel inventions or processes), and who actually owns IP created by employees or contractors, this last point is often missed and can cause serious disputes if not addressed in contracts upfront.</p>
+      <p>Investors will often ask about IP ownership during due diligence, having this cleanly documented from the start makes fundraising significantly smoother.</p>
+      <p class="guide-cta">Building IP into your startup? Book a consultation to protect it properly.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Dissolving a business partnership properly</div><div class="s">Ending it without a mess</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Dissolving a partnership involves settling outstanding debts, dividing remaining assets according to the partnership agreement (or by default rules if none exists), and formally notifying CAC and relevant parties, skipping proper dissolution can leave partners personally liable for business obligations even after they've walked away informally.</p>
+      <p>Where partners disagree on how to wind things down, this is exactly the kind of dispute best resolved with legal guidance rather than an increasingly tense informal negotiation.</p>
+      <p class="guide-cta">Winding down a business partnership? Book a consultation to do it properly.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Domestic violence criminal charges</div><div class="s">When it becomes a police matter</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Domestic violence is a criminal offence in Nigeria, not merely a private family matter, and can be prosecuted alongside civil protection order applications. Police are obligated to take a report seriously and investigate, medical documentation and witness accounts significantly strengthen both the criminal case and any protection order sought.</p>
+      <p>Pressing charges and seeking safety are not mutually exclusive, protection orders exist specifically to allow both at once.</p>
+      <p class="guide-cta">Considering criminal charges in a domestic violence situation? Reach out on WhatsApp.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">White-collar crime and financial fraud</div><div class="s">Obtaining by false pretences, and related charges</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Financial fraud charges, obtaining by false pretences, forgery, embezzlement, are increasingly investigated by the EFCC alongside regular police, and often involve complex financial evidence, bank records, transaction trails, that takes time to properly build or challenge. These cases can carry serious penalties given the financial scale often involved.</p>
+      <p>Whether you're a victim seeking recovery or facing an accusation, early legal involvement significantly affects how the financial evidence is understood and presented.</p>
+      <p class="guide-cta">Involved in a financial fraud matter, as victim or accused? Book a consultation urgently.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">How the law treats juvenile offenders</div><div class="s">Minors and the criminal justice system</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Nigeria's Child Rights Act and related state laws treat offenders under 18 differently from adults, generally through juvenile courts focused more on rehabilitation than punishment, with different detention conditions and processes. A minor should not be held in adult detention facilities or processed through the regular adult criminal system.</p>
+      <p>Parents or guardians have a right to be involved throughout the process, and a lawyer's early involvement helps ensure a minor's rights are properly protected.</p>
+      <p class="guide-cta">Dealing with a juvenile facing charges? Book a consultation immediately.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Self-defence: what the law allows</div><div class="s">When force is legally justified</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Nigerian law recognises a right to self-defence, but the force used must be reasonable and proportionate to the threat faced, using significantly more force than necessary can itself become a criminal matter, even if you were initially the one attacked. Context, immediacy of the threat, and available alternatives all factor into how a court assesses this.</p>
+      <p>If you've acted in self-defence and now face charges, documenting the circumstances and any witnesses as early as possible strengthens your position considerably.</p>
+      <p class="guide-cta">Facing charges after acting in self-defence? Book a consultation urgently.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="criminal" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Plea bargaining explained</div><div class="s">An option worth understanding, not assuming</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Plea bargaining, agreeing to plead guilty to a lesser charge or receive a reduced sentence in exchange for cooperation, is a recognised part of Nigerian criminal procedure in certain cases, but it's not automatically the right move, it depends heavily on the strength of the evidence against you and what's actually being offered.</p>
+      <p>This is a decision that genuinely benefits from experienced legal judgment, accepting a plea too quickly can mean giving up a defence that might have succeeded at trial.</p>
+      <p class="guide-cta">Considering a plea arrangement? Book a consultation before deciding anything.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Filing a lawsuit: the first steps</div><div class="s">What actually happens when you sue</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Filing a lawsuit starts with a properly drafted originating process (the specific document depends on the court and claim type), filed with supporting documents and paid filing fees, then formally served on the other party, who has a set period to respond before the matter proceeds.</p>
+      <p>Getting the initial filing right matters more than people expect, procedural errors at this stage can delay a case significantly or in some situations weaken it.</p>
+      <p class="guide-cta">Ready to file a claim? Book a consultation to get it done properly.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Counterclaims: defending and suing back</div><div class="s">When you're sued but you're also owed</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>If you've been sued but believe the other party actually owes you, a counterclaim lets you raise your own claim within the same proceedings, rather than starting a separate case, this is often more efficient and lets a single judgment resolve both sides of the dispute.</p>
+      <p>Counterclaims have their own filing requirements and deadlines within the existing case, missing these can mean losing the chance to raise them at all.</p>
+      <p class="guide-cta">Been sued but believe you're also owed something? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Cross-border and international disputes</div><div class="s">When the other party isn't in Nigeria</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Disputes involving a party abroad, an overseas business partner, a diaspora family member, raise extra questions about which country's courts have jurisdiction and how a Nigerian judgment could be enforced elsewhere, or vice versa. International arbitration clauses in contracts often exist specifically to avoid this uncertainty.</p>
+      <p>These cases benefit enormously from early legal guidance, since the wrong jurisdiction choice can mean an otherwise winnable case becomes unenforceable in practice.</p>
+      <p class="guide-cta">Dealing with a dispute involving a party abroad? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Consumer protection complaints</div><div class="s">When a product or service fails you</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Nigeria's Federal Competition and Consumer Protection Commission (FCCPC) handles complaints about defective products, false advertising, and unfair business practices, and can investigate businesses directly, sometimes resolving matters faster than going straight to court. Serious or high-value disputes can still proceed to civil litigation alongside or after a regulatory complaint.</p>
+      <p>Keeping receipts, communications, and evidence of the defect or misrepresentation strengthens either route significantly.</p>
+      <p class="guide-cta">Dealing with a consumer complaint that hasn't been resolved? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Arbitration clauses in contracts</div><div class="s">What you're agreeing to when you sign</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Many contracts, especially business and employment agreements, include a clause requiring disputes to go to arbitration rather than court, once signed, this is generally binding and can prevent you from suing directly even if you'd prefer to. Understanding this clause before signing matters more than most people realise at the time.</p>
+      <p>Arbitration outcomes are typically final and very difficult to appeal, which cuts both ways, faster resolution, but limited recourse if the outcome doesn't go your way.</p>
+      <p class="guide-cta">Reviewing a contract with an arbitration clause? Book a consultation before signing.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="digital" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Stocks and digital investments: the basics</div><div class="s">How Nigerian law treats them</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Buying stocks in Nigeria means owning a share of a company, and this activity is regulated by the Securities and Exchange Commission (SEC), trades should go through a licensed stockbroker or a registered digital investment platform, not an informal arrangement, since unlicensed operators offer no real protection if something goes wrong.</p>
+      <p>Dividends, capital gains, and how losses are treated all carry specific tax and disclosure implications worth understanding before you invest any meaningful amount.</p>
+      <p class="guide-cta">New to stock investing or reviewing an existing portfolio? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="digital" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Cryptocurrency: where Nigerian law stands</div><div class="s">Legal, but not yet fully regulated</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Owning and trading cryptocurrency is not illegal in Nigeria, but the regulatory framework has shifted several times, the SEC has moved toward licensing certain digital asset platforms, while banks were previously restricted from directly facilitating crypto transactions. This evolving status means the specific rules can change, worth checking current guidance before any significant transaction.</p>
+      <p>Disputes involving crypto, lost funds, platform failures, fraud, are genuinely harder to resolve than traditional finance disputes, since tracing and recovery depend heavily on the specific platform and blockchain involved.</p>
+      <p class="guide-cta">Dealing with a crypto-related dispute or loss? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="digital" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Digital assets under Islamic law</div><div class="s">Permissible, with real conditions attached</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Scholarly views differ, but a common position is that stocks in genuinely halal businesses (not involved in interest-based finance, alcohol, gambling, or similarly prohibited activity) are generally permissible, since you're buying real ownership in a real enterprise. Cryptocurrency draws more debate, some scholars view certain coins as permissible digital property, others raise concerns about excessive speculation (gharar) in highly volatile assets.</p>
+      <p>What matters practically is avoiding pure speculation dressed up as investment, and being honest with yourself about whether you're investing or gambling with extra steps.</p>
+      <p class="guide-cta">Want guidance on a specific investment from an Islamic law perspective? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="digital" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Recognising investment scams</div><div class="s">Red flags before you send money</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Guaranteed high returns with little or no risk, pressure to recruit others, unclear or evasive answers about how the actual returns are generated, and platforms with no verifiable license, these are the consistent hallmarks of Ponzi and investment fraud schemes that have repeatedly cost Nigerians significant money.</p>
+      <p>Legitimate investments, including stocks and regulated crypto platforms, can lose money, any platform claiming otherwise is telling you something false, worth treating as a hard stop rather than a minor concern.</p>
+      <p class="guide-cta">Think you've encountered an investment scam, or already lost money to one? Book a consultation.</p>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="digital" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Verifying a platform before you invest</div><div class="s">Checking licenses from reliable sources</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Before investing through any platform, verify its license status directly through the SEC Nigeria website's list of registered capital market operators, rather than trusting claims made on the platform's own marketing or social media. For crypto specifically, check whether the exchange has genuinely obtained SEC approval, many claim compliance without actually holding it.</p>
+      <p>A few extra minutes of verification against an official regulator source is consistently the difference between a real investment and a costly mistake.</p>
+      <p class="guide-cta">Unsure whether a platform is genuinely licensed? Book a consultation before you invest.</p>
+    </div>
+  </div>
+
+  </div>
+
+  </div>
+
+    </div>
+  </div>
+  </div>
+
+  <p class="section-label" id="templates">Document templates</p>
+  <button class="cat-entry" onclick="openTemplatesPage()">
+    <span class="cat-dot dot-templates"></span>
+    <span>Browse all templates</span>
+    <span class="chev">›</span>
+  </button>
+
+  <div id="templatesOverlay" class="page-overlay">
+  <div class="page-panel">
+    <div class="page-header">
+      <button class="page-back" onclick="closeTemplatesPage()">‹ Back</button>
+      <p class="page-title">Document Templates</p>
+    </div>
+    <div class="page-body">
+
+  <p class="tpl-hint">Showing 5 picked for current demand. Reopen the app for a fresh set.</p>
+
+  <div class="template-list">
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Simple tenancy agreement</div><div class="s">Plain-language template</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Covers rent amount, payment schedule, duration, notice period, and repair responsibilities in plain language. The most requested template on this app, one of the most common documents people need before moving into a new place or letting one out.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Simple tenancy agreement')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="property" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Land sale agreement / deed of assignment</div><div class="s">With title clause</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Covers the transfer of land or property ownership, including title representation, purchase price, and registration steps. High demand right now given how common land disputes have become, this is worth getting right at the point of sale, not after.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Land sale agreement / deed of assignment')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Business MOU</div><div class="s">Reviewed format</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Sets out terms between two parties before a formal contract, roles, contribution, and intent, commonly used for partnerships and early-stage business arrangements.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Business MOU')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Employment contract</div><div class="s">Standard format</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Covers role, salary, hours, leave, and termination terms. Increasingly requested by small businesses formalising staff who were previously working informally.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Employment contract')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Non-disclosure agreement (NDA)</div><div class="s">Standard format</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Protects confidential information shared between two parties, commonly requested before business discussions, investor conversations, or freelance work involving sensitive data.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Non-disclosure agreement')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="business" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Loan / IOU agreement</div><div class="s">With repayment terms</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Documents a personal or business loan, amount, repayment schedule, and consequences of default. A frequently requested template for informal lending between individuals and small businesses.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Loan / IOU agreement')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Marriage contract, sharia format</div><div class="s">With conditions clause</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>A nikah contract format with an optional conditions clause, covering things like work, education, and residence terms, agreed upfront by both parties.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Marriage contract, sharia format')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="family" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Simple will / testament</div><div class="s">Guided format</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Sets out how you'd like your estate distributed, reducing the likelihood of family disputes later. A growing number of clients are requesting this proactively rather than leaving it until it's urgent.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Simple will / testament')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Affidavit (loss of document / age declaration)</div><div class="s">Court-ready format</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>One of the most frequently requested documents in Nigeria right now, needed for lost ID cards, NIN issues, age declarations for school or travel, and other situations requiring a sworn statement.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Affidavit')">Request this template</button>
+    </div>
+  </div>
+
+  <div class="guide-item" data-cat="litigation" onclick="toggleGuide(this)">
+    <div class="guide-head">
+      <div><div class="t">Power of attorney</div><div class="s">General or limited</div></div>
+      <span class="chev">›</span>
+    </div>
+    <div class="guide-body">
+      <p>Authorises someone to act on your behalf, general or limited to a specific matter such as a property transaction. Commonly requested by clients travelling or living abroad who need someone managing affairs at home.</p>
+      <button class="tpl-btn" onclick="requestTemplate(event, 'Power of attorney')">Request this template</button>
+    </div>
+  </div>
+
+  </div>
+
+    </div>
+  </div>
+  </div>
+
+  <p class="section-label" id="booking">Book a consultation</p>
+
+  <div class="card">
+    <p class="field-label">Topic</p>
+    <select id="topic" onchange="toggleOtherTopic()">
+      <option>General consultation</option>
+      <option>Inheritance dispute</option>
+      <option>Marriage or divorce (sharia)</option>
+      <option>Child custody</option>
+      <option>Prenuptial or marriage contract</option>
+      <option>Domestic violence</option>
+      <option>Business or corporate matter</option>
+      <option>Business registration</option>
+      <option>Contract drafting or review</option>
+      <option>Partnership agreement</option>
+      <option>Debt recovery</option>
+      <option>Employment matter</option>
+      <option>Property or land dispute</option>
+      <option>Buying or selling land</option>
+      <option>Tenancy</option>
+      <option>Landlord-tenant dispute</option>
+      <option>Criminal matter</option>
+      <option>Bail assistance</option>
+      <option>Litigation</option>
+      <option>Mediation or arbitration</option>
+      <option>Small claims</option>
+      <option>Appeal</option>
+      <option>Will or estate planning</option>
+      <option>Power of attorney</option>
+      <option>Affidavit</option>
+      <option value="other">Other, not listed</option>
+    </select>
+
+    <div id="otherTopicWrap" style="display:none;">
+      <p class="field-label">Tell us briefly what it's about</p>
+      <input type="text" id="otherTopic" placeholder="e.g. Trademark registration">
+    </div>
+
+    <p class="field-label">Preferred time</p>
+    <input type="text" id="time" placeholder="e.g. Wednesday, 3pm">
+
+    <div class="fee-note" style="flex-direction:column; align-items:stretch; gap:8px;">
+      <div style="display:flex; justify-content:space-between;"><span>Family matters</span><b>₦10,000</b></div>
+      <div style="display:flex; justify-content:space-between;"><span>Business &amp; contracts</span><b>₦20,000</b></div>
+      <div style="display:flex; justify-content:space-between;"><span>Litigation &amp; disputes</span><b>₦30,000</b></div>
+      <div style="display:flex; justify-content:space-between;"><span>General consultation</span><b>₦50,000</b></div>
+      <div style="font-size:11px; color:var(--text-muted); margin-top:2px;">Final fee confirmed on WhatsApp before booking.</div>
+    </div>
+
+    <button class="btn-primary" onclick="bookOnWhatsApp()">
+      Continue on WhatsApp
+    </button>
+  </div>
+
+</main>
+
+<footer>
+  <div class="disclaimer-tab">Guides on this app are General Legal Information. So, Book a consultation for guidance on your case.</div>
+  <p>© 2026 On Point Lawyers, All Rights Reserved</p>
+</footer>
+
+<script>
+  const catLabels = {
+    family: 'Family & Marriage',
+    property: 'Property & Land',
+    business: 'Business & Contracts',
+    criminal: 'Criminal Law',
+    litigation: 'Disputes & Litigation',
+    digital: 'Digital Assets'
+  };
+
+  function setTab(btn){
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const cat = btn.getAttribute('data-cat');
+    const matching = Array.from(document.querySelectorAll('.guide-list .guide-item'))
+      .filter(item => item.getAttribute('data-cat') === cat);
+    const shuffled = matching.sort(() => Math.random() - 0.5);
+    document.querySelectorAll('.guide-list .guide-item').forEach(item => {
+      item.setAttribute('data-hidden', 'true');
+      item.classList.remove('open');
+    });
+    shuffled.slice(0, 5).forEach(item => item.removeAttribute('data-hidden'));
+    const glowWrap = document.getElementById('guidesGlow');
+    if(glowWrap){
+      glowWrap.classList.remove('glow-family','glow-property','glow-business','glow-criminal','glow-litigation','glow-digital');
+      glowWrap.classList.add('glow-' + cat);
+    }
+    const titleEl = document.getElementById('guidesPageTitle');
+    if(titleEl && catLabels[cat]) titleEl.textContent = catLabels[cat];
+  }
+
+  function openGuidesPage(cat){
+    const btn = document.querySelector(`.tab-btn[data-cat="${cat}"]`);
+    if(btn) setTab(btn);
+    document.getElementById('guidesOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('guidesOverlay').querySelector('.page-body').scrollTop = 0;
+  }
+
+  function closeGuidesPage(){
+    document.getElementById('guidesOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function openTemplatesPage(){
+    shuffleTemplates();
+    document.getElementById('templatesOverlay').classList.add('open');
+    document.body.style.overflow = 'hidden';
+    document.getElementById('templatesOverlay').querySelector('.page-body').scrollTop = 0;
+  }
+
+  function closeTemplatesPage(){
+    document.getElementById('templatesOverlay').classList.remove('open');
+    document.body.style.overflow = '';
+  }
+
+  function shuffleTemplates(){
+    const items = Array.from(document.querySelectorAll('.template-list .guide-item'));
+    items.forEach(item => { item.setAttribute('data-hidden', 'true'); item.classList.remove('open'); });
+    const shuffled = items.sort(() => Math.random() - 0.5);
+    shuffled.slice(0, 5).forEach(item => item.removeAttribute('data-hidden'));
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const activeTab = document.querySelector('.tab-btn.active');
+    if(activeTab) setTab(activeTab);
+    shuffleTemplates();
+  });
+
+  function toggleGuide(el){
+    el.classList.toggle('open');
+  }
+
+  function requestTemplate(event, name){
+    event.stopPropagation();
+    const phone = '2347035820997';
+    const msg = encodeURIComponent(`Hi, I'd like to request the template: ${name}`);
+    window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+  }
+
+  function openWhatsAppDirect(){
+    const phone = '2347035820997';
+    window.open(`https://wa.me/${phone}`, '_blank');
+  }
+
+  let chatHistory = [];
+
+  function openChat(){
+    document.getElementById('chatOverlay').classList.add('open');
+  }
+
+  function closeChat(){
+    document.getElementById('chatOverlay').classList.remove('open');
+  }
+
+  async function sendChatMessage(){
+    const input = document.getElementById('chatInput');
+    const text = input.value.trim();
+    if(!text) return;
+    input.value = '';
+
+    const messagesEl = document.getElementById('chatMessages');
+
+    const userBubble = document.createElement('div');
+    userBubble.className = 'chat-bubble user';
+    userBubble.textContent = text;
+    messagesEl.appendChild(userBubble);
+
+    chatHistory.push({ role: 'user', content: text });
+
+    const loadingBubble = document.createElement('div');
+    loadingBubble.className = 'chat-bubble loading';
+    loadingBubble.textContent = 'Typing...';
+    messagesEl.appendChild(loadingBubble);
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+
+    try{
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: chatHistory })
+      });
+      const data = await res.json();
+      loadingBubble.remove();
+
+      const reply = data.reply || data.error || "Sorry, something went wrong. Please try again or book a consultation.";
+      const botBubble = document.createElement('div');
+      botBubble.className = 'chat-bubble bot';
+      botBubble.textContent = reply;
+      messagesEl.appendChild(botBubble);
+      chatHistory.push({ role: 'assistant', content: reply });
+    } catch(err){
+      loadingBubble.remove();
+      const errorBubble = document.createElement('div');
+      errorBubble.className = 'chat-bubble bot';
+      errorBubble.textContent = "Couldn't reach the AI right now. Please try again, or book a consultation directly.";
+      messagesEl.appendChild(errorBubble);
+    }
+
+    messagesEl.scrollTop = messagesEl.scrollHeight;
+  }
+
+  function toggleOtherTopic(){
+    const select = document.getElementById('topic');
+    const wrap = document.getElementById('otherTopicWrap');
+    wrap.style.display = (select.value === 'other') ? 'block' : 'none';
+  }
+
+  function bookOnWhatsApp(){
+    const select = document.getElementById('topic');
+    let topic = select.value;
+    if(topic === 'other'){
+      const custom = document.getElementById('otherTopic').value.trim();
+      topic = custom || 'Other (not specified)';
+    }
+    const time = document.getElementById('time').value || 'flexible';
+    const phone = '2347035820997';
+    const msg = encodeURIComponent(
+      `Hi, I'd like to book a consultation.\nTopic: ${topic}\nPreferred time: ${time}`
+    );
+    window.open(`https://wa.me/${phone}?text=${msg}`, '_blank');
+  }
+
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+
+  // --- Install banner logic ---
+  let deferredInstallPrompt = null;
+
+  function isStandalone(){
+    return window.matchMedia('(display-mode: standalone)').matches
+      || window.navigator.standalone === true;
+  }
+
+  function isIOS(){
+    return /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+  }
+
+  function dismissInstallBanner(){
+    document.getElementById('installBanner').classList.remove('show');
+    try{ localStorage.setItem('installBannerDismissed', '1'); }catch(e){}
+  }
+
+  function handleInstallClick(){
+    if (deferredInstallPrompt) {
+      deferredInstallPrompt.prompt();
+      deferredInstallPrompt.userChoice.finally(() => {
+        deferredInstallPrompt = null;
+        dismissInstallBanner();
+      });
+    }
+  }
+
+  function showInstallBanner(){
+    let dismissed = false;
+    try{ dismissed = localStorage.getItem('installBannerDismissed') === '1'; }catch(e){}
+    if (dismissed || isStandalone()) return;
+
+    const banner = document.getElementById('installBanner');
+    const btn = document.getElementById('installBtn');
+    const sub = document.getElementById('installSub');
+
+    if (isIOS()) {
+      sub.textContent = "Tap the Share icon, then 'Add to Home Screen'.";
+      btn.style.display = 'none';
+      banner.classList.add('show');
+    } else if (deferredInstallPrompt) {
+      sub.textContent = 'Add On Point Lawyers to your home screen for quick access.';
+      btn.style.display = 'inline-block';
+      banner.classList.add('show');
+    }
+  }
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredInstallPrompt = e;
+    showInstallBanner();
+  });
+
+  window.addEventListener('appinstalled', () => {
+    dismissInstallBanner();
+  });
+
+  document.addEventListener('DOMContentLoaded', () => {
+    if (isIOS()) setTimeout(showInstallBanner, 1500);
+  });
+</script>
+
+<div id="chatOverlay" class="chat-overlay" onclick="if(event.target===this)closeChat()">
+  <div class="chat-panel">
+    <div class="chat-header">
+      <div>
+        <p class="chat-title">Ask a question</p>
+        <p class="chat-subtitle">AI pre-guidance, not a substitute for a consultation</p>
+      </div>
+      <button class="chat-close" onclick="closeChat()">✕</button>
+    </div>
+    <div class="chat-messages" id="chatMessages">
+      <div class="chat-bubble bot">
+        Salam, I can give you general guidance on Nigerian sharia and common law, family matters, property, business, criminal law, and disputes. What's on your mind? For anything specific to your case, I'll point you to book a real consultation.
+      </div>
+    </div>
+    <div class="chat-input-row">
+      <input type="text" id="chatInput" placeholder="Type your legal question..." onkeydown="if(event.key==='Enter')sendChatMessage()">
+      <button class="chat-send" onclick="sendChatMessage()">→</button>
+    </div>
+  </div>
+</div>
+
+<div id="installBanner" class="install-banner">
+  <button class="install-close" onclick="dismissInstallBanner()">✕</button>
+  <div class="install-icon">⇩</div>
+  <div class="install-text">
+    <p class="install-title" id="installTitle">Install this app</p>
+    <p class="install-sub" id="installSub">Add On Point Lawyers to your home screen for quick access.</p>
+  </div>
+  <button class="install-btn" id="installBtn" onclick="handleInstallClick()">Install</button>
+</div>
+
+</body>
+</html>
